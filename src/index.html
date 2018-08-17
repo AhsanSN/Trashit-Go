@@ -92,12 +92,12 @@ input[type="text"]{font: 15px/24px "Lato", Arial, sans-serif; color: #333; width
         </header><!-- #header -->
 
       <!-- start banner Area -->
-      <section class="banner-area relative" id="home">
+      <section class="banner-area relative" >
         <div class="overlay overlay-bg"></div>
         <div class="container">
           <div class="row fullscreen d-flex justify-content-center align-items-center">
-            <div class="banner-content col-lg-9 col-md-12 justify-content-center" style="top: -130px;">
-              <h1 class="mb-10" >TrashIt</h1>
+            <div class="banner-content col-lg-9 col-md-12 justify-content-center" style="top: -130px;" id="home">
+              <h1 class="mb-10" id="samp">TrashIt</h1>
               <h1 class="mb-10" style="    font-size: 30px;
     font-weight: 400;">bla bla bla</h1>
               <div class="container">
@@ -107,13 +107,19 @@ input[type="text"]{font: 15px/24px "Lato", Arial, sans-serif; color: #333; width
             <br>
 
             <div class="callto-action-wrap col-lg-12 relative section-gap" style=" padding: 0 0px 0 0px; width: 100%;">
-              <form ng-submit="toChat_join(task.title)">
-                <input required="" type="text" class="form-control form-control-lg input-block js-email-notice-trigger" placeholder="Add you phone number." ng-model="task.title">
+              <form ng-submit="formPhoneNumber(phoneNumber)">
+                <input required="" type="text" class="form-control form-control-lg input-block js-email-notice-trigger" placeholder="Add you phone number." ng-model="phoneNumber">
               </form>
             </div>
+            
+
 
           </div>
         </div>  
+        <div class="banner-content col-lg-9 col-md-12 justify-content-center" style="top: -130px; display: none;" id="accountCreated">
+              <h1 class="mb-10" style="    font-size: 30px;
+    font-weight: 400; color: green;">Account Created Successfully!</h1>
+            </div>
         
                                 
           </div>
