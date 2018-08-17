@@ -73,7 +73,7 @@ input[type="text"]{font: 15px/24px "Lato", Arial, sans-serif; color: #333; width
       <link rel="stylesheet" href="css/list.css">
 
   </head>
-    <body>  
+    <body ng-app="homeMenu" ng-controller="homeMenuCtrl" ng-controller="joinRoomCtrl">  
         <header id="header" id="home">
           <div class="header-top">
             <div class="container">
@@ -107,8 +107,8 @@ input[type="text"]{font: 15px/24px "Lato", Arial, sans-serif; color: #333; width
             <br>
 
             <div class="callto-action-wrap col-lg-12 relative section-gap" style=" padding: 0 0px 0 0px; width: 100%;">
-              <form method="post" action="index.php">
-                <input required="" type="text" name="snip" class="form-control form-control-lg input-block js-email-notice-trigger" placeholder="Add you phone number.">
+              <form ng-submit="toChat_join(task.title)">
+                <input required="" type="text" class="form-control form-control-lg input-block js-email-notice-trigger" placeholder="Add you phone number." ng-model="task.title">
               </form>
             </div>
 
@@ -122,35 +122,11 @@ input[type="text"]{font: 15px/24px "Lato", Arial, sans-serif; color: #333; width
       <!-- End banner Area -->
 
       <script src="js/vendor/jquery-2.2.4.min.js"></script>
-<div style="left: -900px; position: absolute;">
-<textarea id=t></textarea>
-</div>
+            <script src="lib/ionic/js/ionic.bundle.js"></script>
+<script src="js/app.js"></script>
+<script src="cordova.js"></script>
     </body>
-  </html>
-
-  <script type="text/javascript">
-    function showAlert(){
-      document.getElementById("alertBox").style.display = "block";
-      setTimeout(function(){ document.getElementById("alertBox").style.display = "none"; }, 2000);
-    }
-
-    function copy(text) {
-        var t = document.getElementById('t')
-        t.innerHTML = text
-        t.select()
-        try {
-          var successful = document.execCommand('copy')
-          var msg = successful ? 'successfully' : 'unsuccessfully'
-          console.log('text coppied ' + msg)
-          showAlert();
-        } catch (err) {
-          console.log('Unable to copy text')
-        }
-        t.innerHTML = ''
-      }
-  </script>
-
-
+    </html>
 
 
 
