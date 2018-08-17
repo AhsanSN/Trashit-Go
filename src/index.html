@@ -1,32 +1,161 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>FamiChat</title>
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <!DOCTYPE html>
+  <html lang="zxx" class="no-js">
+  <head>
+    <style type="text/css">
 
-  <link href="https://fonts.googleapis.com/css?family=Biryani" rel="stylesheet">
-  <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-  <link href="lib/ionic/css/style.css" rel="stylesheet">
+    @import url('https://fonts.googleapis.com/css?family=Damion|Muli:400,600');
+body{
+  font-family: 'Muli', sans-serif;
+}
+h2 {
+    font-family: 'Damion', cursive;
+    font-weight: 400;
+    color: #4caf50;
+    font-size: 35px;
+    text-align: center;
+    position: relative;
+}
+h2:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    left: 0;
+    top: 22px;
+    background: #4caf50;
+    height: 1px;
+}
+h2 i {
+    font-style: normal;
+    background: #fff;
+    position: relative;
+    padding: 10px;
+}
+:focus{outline: none;}
 
-</head>
-<body ng-app="homeMenu" ng-controller="homeMenuCtrl" ng-controller="joinRoomCtrl">
-  <ion-side-menus>
+/* necessary to give position: relative to parent. */
+input[type="text"]{font: 15px/24px 'Muli', sans-serif; color: #333; width: 100%; box-sizing: border-box; letter-spacing: 1px;}
 
-    <ion-side-menu-content class="background-color">
-      <h1 style="font-family: 'Biryani', sans-serif;">FamiChat</h1>
-      <div class="all-buttons">
-          <button class="button button-block btn-color" ng-click="toChatModal();">Start Chat</button>
-          <button class="button button-block btn-color" ng-click="joinRoom();">Join Chat</button>
-          <button class="button button-block btn-color" ng-click="quitApp();">Quit</button>
-      </div>
+:focus{outline: none;}
 
-    </ion-side-menu-content>
+.col-3{float: left; width: 27.33%; margin: 40px 3%; position: relative;} /* necessary to give position: relative to parent. */
+input[type="text"]{font: 15px/24px "Lato", Arial, sans-serif; color: #333; width: 100%; box-sizing: border-box; letter-spacing: 1px;}
 
-  </ion-side-menus>
-</body>
-<script src="lib/ionic/js/ionic.bundle.js"></script>
-<script src="js/app.js"></script>
-<script src="cordova.js"></script>
 
-</html>
+    </style>
+
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/fav.png">
+    <!-- Author Meta -->
+    <meta name="author" content="Anomoz">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>ePaste - Easy Paste</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+      <!--
+      CSS
+      ============================================= -->
+      <link rel="stylesheet" href="css/linearicons.css">
+      <link rel="stylesheet" href="css/font-awesome.min.css">
+      <link rel="stylesheet" href="css/bootstrap.css">
+      <link rel="stylesheet" href="css/magnific-popup.css">
+      <link rel="stylesheet" href="css/nice-select.css">              
+      <link rel="stylesheet" href="css/animate.min.css">
+      <link rel="stylesheet" href="css/owl.carousel.css">
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="css/list.css">
+
+  </head>
+    <body>  
+        <header id="header" id="home">
+          <div class="header-top">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6 col-sm-6 col-4 header-top-left no-padding">
+                  <a href="tel:+92 336 2286 024">+92 336 2286 024</a>
+                  <a href="mailto:sa02908@st.habib.edu.pk">sa02908@st.habib.edu.pk</a>            
+                </div>
+                <div class="col-lg-6 col-sm-6 col-8 header-top-right no-padding">
+                   <a href="https://github.com/ahsansn">Source code available here.</a>
+                </div>
+              </div>                  
+            </div>
+        </div>
+          
+        </header><!-- #header -->
+
+      <!-- start banner Area -->
+      <section class="banner-area relative" id="home">
+        <div class="overlay overlay-bg"></div>
+        <div class="container">
+          <div class="row fullscreen d-flex justify-content-center align-items-center">
+            <div class="banner-content col-lg-9 col-md-12 justify-content-center ">
+              <h1 class="mb-10" >ePaste</h1>
+              <h1 class="mb-10" style="    font-size: 30px;
+    font-weight: 400;">Easiest way to share text snippets.</h1>
+              <div class="container">
+            <p class="mx-auto" style="color: white; margin: 30px 0 0 0; font-size: 20px;">
+              Click a text to copy it.
+            </p>
+
+          </div>
+        </div>  
+        <div class="callto-action-wrap col-lg-12 relative section-gap" style=" padding: 0 0px 0 0px; width: 80%;">
+          <form method="post" action="index.php">
+            <input required="" type="text" name="snip" class="form-control form-control-lg input-block js-email-notice-trigger" placeholder="Post a snippet!">
+          </form>
+        </div>
+                                
+          </div>
+        </div>
+      </section>
+      <!-- End banner Area -->
+
+      <script src="js/vendor/jquery-2.2.4.min.js"></script>
+      <script src="js/main.js"></script>  
+<div style="left: -900px; position: absolute;">
+<textarea id=t></textarea>
+</div>
+    </body>
+  </html>
+
+  <script type="text/javascript">
+    function showAlert(){
+      document.getElementById("alertBox").style.display = "block";
+      setTimeout(function(){ document.getElementById("alertBox").style.display = "none"; }, 2000);
+    }
+
+    function copy(text) {
+        var t = document.getElementById('t')
+        t.innerHTML = text
+        t.select()
+        try {
+          var successful = document.execCommand('copy')
+          var msg = successful ? 'successfully' : 'unsuccessfully'
+          console.log('text coppied ' + msg)
+          showAlert();
+        } catch (err) {
+          console.log('Unable to copy text')
+        }
+        t.innerHTML = ''
+      }
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
