@@ -63,6 +63,13 @@ angular.module('homeMenu', ['ionic'])
       ]
     }
 
+    $scope.leaderboardStorage = [
+        "Alfreds Futterkiste",
+        "Berglunds snabbköp",
+        "Centro comercial Moctezuma",
+        "Ernst Handel",
+    ]
+
       window.localStorage.setItem("leaderboardStorage", JSON.stringify(leaderboardStorage));
 
  })
