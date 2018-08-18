@@ -26,11 +26,10 @@ figcaption{
 }
 
 .w3-btn, .w3-btn:link, .w3-btn:visited {
-    position: fixed;
     color: #FFFFFF;
     background-color: #4CAF50;
-    right: 1px;
-    top: 1px;
+    width: 200px;
+
 }
 .w3-margin-bottom {
     margin-bottom: 16px!important;
@@ -44,8 +43,6 @@ figcaption{
     user-select: none;
 }
 .w3-btn, .w3-button {
-      right: 1px;
-    top: 1px;
     border: none;
     display: inline-block;
     padding: 8px 16px;
@@ -59,6 +56,9 @@ figcaption{
     white-space: nowrap;
 }
 
+.w3-btn:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
 
     </style>
 
@@ -98,15 +98,14 @@ figcaption{
         <div class="overlay overlay-bg"></div>
         <div class="container">
           <div class="row fullscreen d-flex justify-content-center align-items-center">
-            <div class="banner-content col-lg-9 col-md-12 justify-content-center" style="top: -130px; display: none;" id="home">
-              <a href="#" class="w3-btn w3-margin-bottom">Store</a>
+            <div class="banner-content col-lg-9 col-md-12 justify-content-center" style="top: -100px; display: none;" id="home">
+              <a href="#" class="w3-btn w3-margin-bottom" style="position: fixed;right: 1px;top: 1px; width: 90px;">About</a>
 
-              <h1 class="mb-10" id="samp">TrashIt</h1>
               <h1 class="mb-10" style="    font-size: 30px;
-    font-weight: 400;">bla bla bla</h1>
+    font-weight: 400;">Dashboard</h1>
               <div class="container">
             <p class="mx-auto" style="color: white; margin: 30px 0 0 0; font-size: 20px;">
-              this is your logged in account home page
+              Your green collection.
             </p>
             <br>
             <div class="center">
@@ -131,14 +130,17 @@ figcaption{
               <figcaption>x0</figcaption>
             </figure>
           </div>
+
           </div>
+              <a href="#" class="w3-btn" style="margin:24px 0 4px 0;">Leaderboard</a>
+              <br>
+              <a href="#" class="w3-btn" style="margin: 4px">Store</a>
+              <br>
+              <a href="#" class="w3-btn" style="margin: 4px">Payouts</a>
+              <br>
         </div>
         </div>  
-        <div class="banner-content col-lg-9 col-md-12 justify-content-center" style="top: -130px; display: none;" id="accountCreated">
-              <h1 class="mb-10" style="font-size: 30px;
-    font-weight: 400; color: green;">Account Created Successfully!</h1>
-            </div>
-        
+
                                 
           </div>
         </div>
