@@ -48,7 +48,7 @@
     font-weight: 400;">Dashboard</h1>
                     <div class="progress-wrap progress" data-progress-percent="50">
   <div class="progress-bar progress"></div>
-</div>
+</div><p class="progress-p">Level 5</p>
               <div class="container">
 
             <p class="mx-auto" style="color: white; margin: 30px 0 0 0; font-size: 20px;">
@@ -56,7 +56,7 @@
             </p>
             <br>
             <div class="center">
-            <div class="seedBombCollection">
+            <div class="seedBombCollection" style="display: block;">
             <figure  class="bombImg">
               <img id="profile-img" src="https://lh6.googleusercontent.com/--2fS4T8kO6k/AAAAAAAAAAI/AAAAAAAAAAA/AB6qoq2DVOW0W3Xlm3tLINHu-rc4Jd2jLQ/s96-c/photo.jpg" class="bombI" alt="seed bomb">
               <figcaption>x2</figcaption>
@@ -77,8 +77,10 @@
               <figcaption>x0</figcaption>
             </figure>
           </div>
+          <br>
 
           </div>
+          <br>
               <a href="/leaderboard.html" class="w3-btn" style="margin:24px 0 4px 0;">Leaderboard</a>
               <br>
               <a href="/store.html" class="w3-btn" style="margin: 4px">Store</a>
@@ -100,33 +102,11 @@
       <script src="js/vendor/jquery-2.2.4.min.js"></script>
             <script src="lib/ionic/js/ionic.bundle.js"></script>
 <script src="js/app.js"></script>
+<script src="js/progressBar.js"></script>
 <script src="cordova.js"></script>
 
-<script type="text/javascript">
-  // on page load...
-    moveProgressBar();
-    // on browser resize...
-    $(window).resize(function() {
-        moveProgressBar();
-    });
-
-    // SIGNATURE PROGRESS
-    function moveProgressBar() {
-      console.log("moveProgressBar");
-        var getPercent = ($('.progress-wrap').data('progress-percent') / 100);
-        var getProgressWrapWidth = $('.progress-wrap').width();
-        var progressTotal = getPercent * getProgressWrapWidth;
-        var animationLength = 2500;
-        
-        // on page load, animate percentage bar to data percentage length
-        // .stop() used to prevent animation queueing
-        $('.progress-bar').stop().animate({
-            left: progressTotal
-        }, animationLength);
-    }
-</script>
-    </body>
-    </html>
+</body>
+</html>
 
 
 
