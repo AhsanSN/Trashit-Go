@@ -63,12 +63,21 @@ angular.module('homeMenu', ['ionic'])
       ]
     }
 
-    $scope.leaderboardStorage = [
-        "Alfreds Futterkiste",
-        "Berglunds snabbköp",
-        "Centro comercial Moctezuma",
-        "Ernst Handel",
-    ]
+    $scope.leaderboardStorage = {
+      "people": [{
+          "name": "John",
+          "level": "12"
+        },
+        {
+          "name": "Anna",
+          "level": "3"
+        },
+        {
+          "name": "Peter",
+          "level": "23"
+        }
+      ]
+    }
 
       window.localStorage.setItem("leaderboardStorage", JSON.stringify(leaderboardStorage));
 
