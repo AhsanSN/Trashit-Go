@@ -63,23 +63,35 @@ angular.module('homeMenu', ['ionic'])
       ]
     }
 
-    $scope.leaderboardStorage = {
-      "people": [{
-          "name": "John",
-          "level": "12"
+    $scope.leaderboardStorage = leaderboardStorage
+
+      window.localStorage.setItem("leaderboardStorage", JSON.stringify(leaderboardStorage));
+
+      //store
+
+
+    var storeStorage = {
+      "products": [{
+          "name": "apple",
+          "about": "very good",
+          "points": "12"
         },
         {
-          "name": "Anna",
-          "level": "3"
+          "name": "mango",
+          "about": "too awesome",
+          "points": "312"
         },
         {
-          "name": "Peter",
-          "level": "23"
+          "name": "banana",
+          "about": "yummy",
+          "points": "74"
         }
       ]
     }
 
-      window.localStorage.setItem("leaderboardStorage", JSON.stringify(leaderboardStorage));
+    $scope.storeStorage = storeStorage;
+
+      window.localStorage.setItem("storeStorage", JSON.stringify(storeStorage));
 
  })
 

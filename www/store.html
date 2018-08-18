@@ -47,52 +47,17 @@
     font-weight: 400;">Store</h1>
               
 
-
-
-
-
-
-<!-- Controllers-->
 <!-- Cards-->
+<div ng-repeat="product in storeStorage.products">
 <div class="card card--big">
   <div class="card__image" style="background-image: url(https://placeimg.com/640/480/any)"></div>
-  <h2 class="card__title" style="color: white;">seed bomb</h2>
-  <p class="card__text">jus a seed bomb. jus a seed bombjus a sead bombjus a sead bombjus a sead bombjus a sead bombjus a sead bomb</p>
+  <h2 class="card__title" style="color: white;">{{product.name}}</h2>
+  <p class="card__text">{{product.about}}</p>
   <div class="card__action-bar">
-    <p>+32 points</p>
+    <p>+{{product.points}} points</p>
   </div>
 </div>
-
-<div class="card card--big">
-  <div class="card__image" style="background-image: url(https://placeimg.com/640/480/any)"></div>
-  <h2 class="card__title" style="color: white;">seed bomb</h2>
-  <p class="card__text">jus a seed bomb. jus a seed bombjus a sead bombjus a sead bombjus a sead bombjus a sead bombjus a sead bomb</p>
-  <div class="card__action-bar">
-    <p>+32 points</p>
-  </div>
 </div>
-
-
-<div class="card card--big">
-  <div class="card__image" style="background-image: url(https://placeimg.com/640/480/any)"></div>
-  <h2 class="card__title" style="color: white;">seed bomb</h2>
-  <p class="card__text">jus a seed bomb. jus a seed bombjus a sead bombjus a sead bombjus a sead bombjus a sead bombjus a sead bomb</p>
-  <div class="card__action-bar">
-    <p>+32 points</p>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
 
         </div>  
 
