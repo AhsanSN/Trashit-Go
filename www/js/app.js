@@ -33,9 +33,6 @@ angular.module('homeMenu', ['ionic'])
       }
     }
 
-    //scope.checkHomeRedirect();
-
-
     $scope.test = function(){
       //window.localStorage.setItem("number", JSON.stringify({ 'one': 1, 'two': 2, 'three': 3 }));
       var retrievedObject = localStorage.getItem('number');
@@ -48,6 +45,25 @@ angular.module('homeMenu', ['ionic'])
 
     $scope.test();
 
+    //leaderboard
+
+    var leaderboardStorage = {
+      "people": [{
+          "name": "John",
+          "level": "12"
+        },
+        {
+          "name": "Anna",
+          "level": "3"
+        },
+        {
+          "name": "Peter",
+          "level": "23"
+        }
+      ]
+    }
+
+      window.localStorage.setItem("leaderboardStorage", JSON.stringify(leaderboardStorage));
 
  })
 
