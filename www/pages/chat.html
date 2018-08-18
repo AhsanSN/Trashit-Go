@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FamiChat</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <script src="https://webrtc.github.io/adapter/adapter-4.2.2.js"></script>
+  <link rel="stylesheet" href="./static/css/style.css">
+
+  <style type="text/css">
+  .main_div {
+    width:400px;
+    height:600px;
+    background-color:#9F0;
+}
+.main_div > div {
+    float: left;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+  <div class="container">
+    <div id="okta-login-container"></div>
+
+    <div class="row">
+      <div class="col"></div>
+      <div class="col-md-auto align-self-center">
+        <p id="login">
+          <b>NOTE</b>: You are not currently logged in. If you'd like to start your own
+          chat room please <button type="button" class="btn btn-light" onclick="document.location='/'">log in</button>
+        </p>
+        <div id="url" class="alert alert-dark" role="alert">
+          <span id="roomIntro">ROOM URL</span>: <span id="roomUrl"></span>
+        </div>
+      </div>
+      <div class="col"></div>
+    </div>
+
+    
+
+    <div class="main_div" id="remotes" style="visibility: visible;">
+          <div class="videoContainer">
+            <video id="selfVideo" oncontextmenu="return false;"></video>
+            <div style="display: none">
+            <meter style="display: none" id="localVolume" class="volume" min="-45" max="-20" high="-25" low="-40"></meter>
+          </div>
+          </div>
+  </div>
+
+<script src="/js/vChat.js"></script>
+</body>
+</html>
