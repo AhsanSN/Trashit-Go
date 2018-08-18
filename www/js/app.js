@@ -2,7 +2,6 @@ angular.module('homeMenu', ['ionic'])
 
   .controller('homeMenuCtrl', function ($scope) {
 
-
     // quit app
     $scope.quitApp = function () {
       console.log("quit")
@@ -13,10 +12,8 @@ angular.module('homeMenu', ['ionic'])
       console.log("formPhoneNumber")
       console.log("name", name)
       console.log("phonenumber", phonenumber)
-      var newProject = Projects.newProject(phonenumber);
-      $scope.projects.push(newProject);
-      Projects.save($scope.projects);
-
+      window.localStorage.setItem('phoneNumber',phonenumber)
+      window.localStorage.setItem('username',name)
       //if validated
       $("#home").fadeOut()
       $("#accountCreated").fadeIn()
@@ -25,10 +22,10 @@ angular.module('homeMenu', ['ionic'])
       window.location = "/home.html"
     }
     $scope.checkHomeRedirect = function(){
-      console.log("starting",$scope.projects.length)
-      if ($scope.projects.length<1){
+      console.log("starting",localStorage.getItem('phoneNumber'))
+      if (localStorage.getItem('phoneNumber')==null){
           console.log("redirect")
-          window.location = "/signup.html"
+          //window.location = "/signup.html"
       }
       else{
         document.getElementById("home").style.display="block";
@@ -40,8 +37,10 @@ angular.module('homeMenu', ['ionic'])
 
 
     $scope.test = function(){
-      window.localStorage.setItem("number", JSON.stringify({ 'one': 1, 'two': 2, 'three': 3 }));
+      //window.localStorage.setItem("number", JSON.stringify({ 'one': 1, 'two': 2, 'three': 3 }));
       var retrievedObject = localStorage.getItem('number');
+
+      console.log(localStorage.getItem('number'))
 
       console.log(JSON.parse(retrievedObject).one)
       console.log($scope.projects);
