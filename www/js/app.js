@@ -93,5 +93,29 @@ angular.module('homeMenu', ['ionic'])
 
       window.localStorage.setItem("storeStorage", JSON.stringify(storeStorage));
 
+
+    //payouts
+
+
+    var payoutStorage = {
+      "payouts": [{
+          "head": "Get to level 5",
+          "about": "Earn 2 seed bombs."
+        },
+        {
+          "head": "Get to level 8",
+          "about": "Earn 3 seed bombs."
+        },
+        {
+          "name": "Get to level 12",
+          "about": "Earn 5 seed bombs."
+        }
+      ]
+    }
+
+    $scope.payoutStorage = payoutStorage;
+
+      window.localStorage.setItem("payoutStorage", JSON.stringify(payoutStorage));
+
  })
 

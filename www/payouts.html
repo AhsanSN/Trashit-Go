@@ -60,38 +60,16 @@
 </style>
 
 
+<div ng-repeat="prize in payoutStorage.payouts">
 <div class="card card--small">
   <div class="card__image" style="background-image: url(https://placeimg.com/640/480/nature);"></div>
-  <h2 class="card__title">Get to level 5</h2>
-  <p class="payout-p">Earn two seed bombs on getting to level 4.</p>
+  <h2 class="card__title">{{prize.head}}</h2>
+  <p class="payout-p">{{prize.about}}</p>
   <div class="card__action-bar">
     <button class="card__button">GET PRIZE</button>
   </div>
 </div>
-
-
-<div class="card card--small">
-  <div class="card__image" style="background-image: url(https://placeimg.com/640/480/nature);"></div>
-  <h2 class="card__title">Get to level 5</h2>
-  <p class="payout-p">Earn two seed bombs on getting to level 4.</p>
-  <div class="card__action-bar">
-    <button class="card__button">GET PRIZE</button>
-  </div>
 </div>
-
-<div class="card card--small">
-  <div class="card__image" style="background-image: url(https://placeimg.com/640/480/nature);"></div>
-  <h2 class="card__title">Get to level 5</h2>
-  <p class="payout-p">Earn two seed bombs on getting to level 4.</p>
-  <div class="card__action-bar">
-    <button class="card__button">GET PRIZE</button>
-  </div>
-</div>
-
-
-
-
-
 
 
         </div>  
