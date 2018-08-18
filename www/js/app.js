@@ -25,7 +25,7 @@ angular.module('homeMenu', ['ionic'])
       console.log("starting",localStorage.getItem('phoneNumber'))
       if (localStorage.getItem('phoneNumber')==null){
           console.log("redirect")
-          //window.location = "/signup.html"
+          window.location = "/signup.html"
       }
       else{
         document.getElementById("home").style.display="block";
@@ -33,7 +33,7 @@ angular.module('homeMenu', ['ionic'])
       }
     }
 
-    $scope.checkHomeRedirect();
+    //scope.checkHomeRedirect();
 
 
     $scope.test = function(){
