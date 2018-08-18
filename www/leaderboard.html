@@ -60,35 +60,15 @@
 </style>
 
 
-<div class="card card--medium">
-  <div class="card__image" style="background-image: url(https://placeimg.com/640/480/nature);"></div>
-  <h2 class="card__title">Ahsan Ahmed</h2><span class="card__subtitle">By Mattia Astorino</span>
-  <p class="card_p">15 Level</p>
-  <div class="card__action-bar">
-    <button class="card__button">View Profile</button>
-  </div>
-</div>
-
-<div class="card card--medium">
-  <div class="card__image" style="background-image: url(https://placeimg.com/640/480/nature);"></div>
-  <h2 class="card__title">Ahsan Ahmed</h2><span class="card__subtitle">By Mattia Astorino</span>
-  <p class="card_p">15 Level</p>
-  <div class="card__action-bar">
-    <button class="card__button">View Profile</button>
-  </div>
-</div>
-
-<div class="card card--medium">
-  <div class="card__image" style="background-image: url(https://placeimg.com/640/480/nature);"></div>
-  <h2 class="card__title">Ahsan Ahmed</h2><span class="card__subtitle">By Mattia Astorino</span>
-  <p class="card_p">15 Level</p>
-  <div class="card__action-bar">
-    <button class="card__button">View Profile</button>
-  </div>
-</div>
-
 <div ng-repeat="user in leaderboardStorage.people">
-    <h1>{{user.name}}</h1>
+    <div class="card card--medium">
+  <div class="card__image" style="background-image: url(https://placeimg.com/640/480/nature);"></div>
+  <h2 class="card__title">{{user.name}}</h2>
+  <p class="card_p">{{user.level}}</p>
+  <div class="card__action-bar">
+    <button class="card__button">View Profile</button>
+  </div>
+</div>
 </div>
 
 
