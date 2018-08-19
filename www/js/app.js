@@ -13,7 +13,7 @@ angular.module('homeMenu', ['ionic'])
     //signup
     $scope.formPhoneNumber = function (name, phonenumber) {
 
-      $scope.aboutMeStorage = {
+      var aboutMeStorage = {
       "name": "User",
       "phoneNumber": "0000",
       "level": 1,
@@ -39,24 +39,27 @@ angular.module('homeMenu', ['ionic'])
         }]
       }
     }
+    $scope.aboutMeStorage = aboutMeStorage
+
     window.localStorage.setItem("aboutMeStorage", JSON.stringify(aboutMeStorage));
 
       console.log("formPhoneNumber")
       console.log("name", name)
       console.log("phonenumber", phonenumber)
 
-      var retrievedAboutMeStorage = localStorage.getItem('aboutMeStorage');
-      console.log(JSON.parse(retrievedObject).one)
+      //after auth
+      var retrievedAboutMeStorage = JSON.parse(localStorage.getItem('aboutMeStorage'));
+      retrievedAboutMeStorage.phoneNumber = phonenumber;
+      retrievedAboutMeStorage.name = name;
+      console.log("edited value",retrievedAboutMeStorage)
+      window.localStorage.setItem("aboutMeStorage", JSON.stringify(retrievedAboutMeStorage))
 
-
-      window.localStorage.setItem('phoneNumber',phonenumber)
-      window.localStorage.setItem('username',name)
       //if validated
       $("#home").fadeOut()
       $("#accountCreated").fadeIn()
 
       //after 2 sec
-      window.location = "/home.html"
+      //window.location = "/index.html"
     }
     $scope.checkHomeRedirect = function(){
       console.log("starting",localStorage.getItem('phoneNumber'))
