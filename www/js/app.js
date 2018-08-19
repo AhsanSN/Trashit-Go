@@ -17,7 +17,7 @@ angular.module('homeMenu', ['ionic'])
       "name": "User",
       "phoneNumber": "0000",
       "level": 1,
-      "points": 100,
+      "points": 135,
       "products": {
         "seedbombs": [
           {
