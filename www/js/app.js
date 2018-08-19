@@ -62,8 +62,8 @@ angular.module('homeMenu', ['ionic'])
       //window.location = "/index.html"
     }
     $scope.checkHomeRedirect = function(){
-      console.log("starting",localStorage.getItem('phoneNumber'))
-      if (localStorage.getItem('phoneNumber')==null){
+      var retrievedAboutMeStorage = JSON.parse(localStorage.getItem('aboutMeStorage'));
+      if (retrievedAboutMeStorage.name=="User"){
           console.log("redirect")
           window.location = "/signup.html"
       }
