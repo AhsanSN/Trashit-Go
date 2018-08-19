@@ -142,28 +142,6 @@ input[type="text"]{font: 15px/24px 'Muli', sans-serif; color: #333; width: 100%;
 .col-3{float: left; width: 27.33%; margin: 40px 3%; position: relative;} /* necessary to give position: relative to parent. */
 input[type="text"]{font: 15px/24px "Lato", Arial, sans-serif; color: #333; width: 100%; box-sizing: border-box; letter-spacing: 1px;}
 
-.progress {
-    font-size: 1.2em;
-    height: 20px;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.progress-wrap {
-  border-radius: 2px;
-  background: #157927;
-  margin: 20px 0;
-  overflow: hidden;
-  position: relative;
-}
-.progress-wrap .progress-bar {
-  background-color: #9fe09a;
-  left: 0;
-  position: absolute;
-  top: 0;
-}
-
 .progress-p{
      color: white;
     right: 2px;

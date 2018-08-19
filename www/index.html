@@ -33,6 +33,8 @@
       <link rel="stylesheet" href="css/owl.carousel.css">
       <link rel="stylesheet" href="css/main.css">
       <link rel="stylesheet" href="css/list.css">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 
   </head>
     <body ng-app="homeMenu" ng-controller="homeMenuCtrl">  
@@ -46,9 +48,10 @@
 
               <h1 class="mb-10" style="    font-size: 30px;
     font-weight: 400;">Dashboard</h1>
-                    <div class="progress-wrap progress" data-progress-percent="50">
-  <div class="progress-bar progress"></div>
-</div><p class="progress-p">Level {{aboutMeStorage.level}}</p>
+                    <div class="w3-light-grey w3-round-xlarge">
+    <div class="w3-container w3-blue w3-round-xlarge" style="width:{{25}}%">25%</div>
+</div>    <br>
+<p class="progress-p">Level {{aboutMeStorage.level}}</p>
               <div class="container">
 
             <p class="mx-auto" style="color: white; margin: 30px 0 0 0; font-size: 20px;">
@@ -67,7 +70,7 @@ img {
 </style>
     <!-- code to render a large video block-->
               </div>
-            <figure  class="bombImg">
+            <figure class="bombImg">
               <img id="profile-img" src="https://lh6.googleusercontent.com/--2fS4T8kO6k/AAAAAAAAAAI/AAAAAAAAAAA/AB6qoq2DVOW0W3Xlm3tLINHu-rc4Jd2jLQ/s96-c/photo.jpg" class="bombI" alt="seed bomb">
               <figcaption>x{{seedBomb.quantity}}</figcaption>
             </figure>
