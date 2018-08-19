@@ -78,6 +78,7 @@
 .bombI {
     border-radius: 50%;
     height: 15vw;
+    max-height: 100px;
 }
 
 figcaption {
