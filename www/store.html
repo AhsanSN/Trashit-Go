@@ -1,7 +1,7 @@
-  <!DOCTYPE html>
-  <html lang="zxx" class="no-js">
-  <head>
-    
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
 
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,68 +18,58 @@
     <!-- Site Title -->
     <title>ePaste - Easy Paste</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
-      <!--
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+    <!--
       CSS
       ============================================= -->
-      <link rel="stylesheet" href="css/linearicons.css">
-      <link rel="stylesheet" href="css/font-awesome.min.css">
-      <link rel="stylesheet" href="css/bootstrap.css">
-      <link rel="stylesheet" href="css/magnific-popup.css">
-      <link rel="stylesheet" href="css/nice-select.css">              
-      <link rel="stylesheet" href="css/animate.min.css">
-      <link rel="stylesheet" href="css/owl.carousel.css">
-      <link rel="stylesheet" href="css/main.css">
-      <link rel="stylesheet" href="css/list.css">
-      <link rel="stylesheet" href="css/store.css">
+    <link rel="stylesheet" href="css/linearicons.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/list.css">
+    <link rel="stylesheet" href="css/store.css">
 
-  </head>
-    <body ng-app="homeMenu" ng-controller="homeMenuCtrl">  
+</head>
 
-      <section class="banner-area relative">
+<body ng-app="homeMenu" ng-controller="homeMenuCtrl">
+
+    <section class="banner-area relative">
         <div class="overlay overlay-bg"></div>
         <div class="container">
-          <div class="row fullscreen d-flex ">
-            <div class="banner-content col-lg-9 col-md-12" style="top: 20px;" id="home">
-              <a href="/index.html" class="w3-btn w3-margin-bottom" style="position: fixed;right: 1px;top: 1px; width: 90px;">Back</a>
+            <div class="row fullscreen d-flex ">
+                <div class="banner-content col-lg-9 col-md-12" style="top: 20px;" id="home">
+                    <a href="/index.html" class="w3-btn w3-margin-bottom" style="position: fixed;right: 1px;top: 1px; width: 90px;">Back</a>
 
-              <h1 class="mb-10" style="    font-size: 30px;
+                    <h1 class="mb-10" style="    font-size: 30px;
     font-weight: 400;">Store</h1>
-              
 
-<!-- Cards-->
-<div ng-repeat="product in storeStorage.products">
-<div class="card card--big">
-  <div class="card__image" style="background-image: url(https://placeimg.com/640/480/any)"></div>
-  <h2 class="card__title" style="color: white;">{{product.name}}</h2>
-  <p class="card__text">{{product.about}}</p>
-  <div class="card__action-bar">
-    <p>+{{product.points}} points</p>
-  </div>
-</div>
-</div>
+                    <!-- Cards-->
+                    <div ng-repeat="product in storeStorage.products">
+                        <div class="card card--big">
+                            <div class="card__image" style="background-image: url(https://placeimg.com/640/480/any)"></div>
+                            <h2 class="card__title" style="color: white;">{{product.name}}</h2>
+                            <p class="card__text">{{product.about}}</p>
+                            <div class="card__action-bar">
+                                <p>+{{product.points}} points</p>
+                            </div>
+                        </div>
+                    </div>
 
-        </div>  
+                </div>
 
-                                
-          </div>
+            </div>
         </div>
-      </section>
-      <!-- End banner Area -->
+    </section>
+    <!-- End banner Area -->
 
-      <script src="js/vendor/jquery-2.2.4.min.js"></script>
-            <script src="lib/ionic/js/ionic.bundle.js"></script>
-<script src="js/app.js"></script>
-<script src="cordova.js"></script>
-    </body>
-    </html>
+    <script src="js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="js/app.js"></script>
+    <script src="cordova.js"></script>
+</body>
 
-
-
-
-
-
-
-
-
-
+</html>
