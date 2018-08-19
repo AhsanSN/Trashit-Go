@@ -3,6 +3,9 @@ angular.module('homeMenu', ['ionic'])
   .controller('homeMenuCtrl', function ($scope) {
 
     $scope.aboutMeStorage = JSON.parse(localStorage.getItem('aboutMeStorage'));
+    $scope.leaderboardStorage = JSON.parse(localStorage.getItem('leaderboardStorage'));
+    $scope.storeStorage = JSON.parse(localStorage.getItem('storeStorage'));
+    $scope.payoutStorage = JSON.parse(localStorage.getItem('payoutStorage'));
 
     // quit app
     $scope.quitApp = function () {
@@ -12,6 +15,8 @@ angular.module('homeMenu', ['ionic'])
 
     //signup
     $scope.formPhoneNumber = function (name, phonenumber) {
+
+      //auth here (above this)
 
       var aboutMeStorage = {
       "name": "User",
@@ -45,6 +50,77 @@ angular.module('homeMenu', ['ionic'])
     $scope.aboutMeStorage = aboutMeStorage
 
     window.localStorage.setItem("aboutMeStorage", JSON.stringify(aboutMeStorage));
+
+    var payoutStorage = {
+      "payouts": [{
+          "head": "Get to level 5",
+          "about": "Earn 2 seed bombs."
+        },
+        {
+          "head": "Get to level 8",
+          "about": "Earn 3 seed bombs."
+        },
+        {
+          "name": "Get to level 12",
+          "about": "Earn 5 seed bombs."
+        }
+      ]
+    }
+
+    $scope.payoutStorage = payoutStorage;
+
+    window.localStorage.setItem("payoutStorage", JSON.stringify(payoutStorage));
+
+
+      //store
+
+
+    var storeStorage = {
+      "products": [{
+          "name": "apple",
+          "about": "very good",
+          "points": "12"
+        },
+        {
+          "name": "mango",
+          "about": "too awesome",
+          "points": "312"
+        },
+        {
+          "name": "banana",
+          "about": "yummy",
+          "points": "74"
+        }
+      ]
+    }
+
+    $scope.storeStorage = storeStorage;
+
+      window.localStorage.setItem("storeStorage", JSON.stringify(storeStorage)); 
+
+      
+    //leaderboard
+
+    var leaderboardStorage = {
+      "people": [{
+          "name": "John",
+          "level": "12"
+        },
+        {
+          "name": "Anna",
+          "level": "3"
+        },
+        {
+          "name": "Peter",
+          "level": "23"
+        }
+      ]
+    }
+
+    $scope.leaderboardStorage = leaderboardStorage
+
+      window.localStorage.setItem("leaderboardStorage", JSON.stringify(leaderboardStorage));
+
 
       console.log("formPhoneNumber")
       console.log("name", name)
@@ -92,77 +168,6 @@ angular.module('homeMenu', ['ionic'])
 
     //$scope.test();
 
-    //leaderboard
-
-    var leaderboardStorage = {
-      "people": [{
-          "name": "John",
-          "level": "12"
-        },
-        {
-          "name": "Anna",
-          "level": "3"
-        },
-        {
-          "name": "Peter",
-          "level": "23"
-        }
-      ]
-    }
-
-    $scope.leaderboardStorage = leaderboardStorage
-
-      window.localStorage.setItem("leaderboardStorage", JSON.stringify(leaderboardStorage));
-
-      //store
-
-
-    var storeStorage = {
-      "products": [{
-          "name": "apple",
-          "about": "very good",
-          "points": "12"
-        },
-        {
-          "name": "mango",
-          "about": "too awesome",
-          "points": "312"
-        },
-        {
-          "name": "banana",
-          "about": "yummy",
-          "points": "74"
-        }
-      ]
-    }
-
-    $scope.storeStorage = storeStorage;
-
-      window.localStorage.setItem("storeStorage", JSON.stringify(storeStorage));
-
-
-    //payouts
-
-
-    var payoutStorage = {
-      "payouts": [{
-          "head": "Get to level 5",
-          "about": "Earn 2 seed bombs."
-        },
-        {
-          "head": "Get to level 8",
-          "about": "Earn 3 seed bombs."
-        },
-        {
-          "name": "Get to level 12",
-          "about": "Earn 5 seed bombs."
-        }
-      ]
-    }
-
-    $scope.payoutStorage = payoutStorage;
-
-    window.localStorage.setItem("payoutStorage", JSON.stringify(payoutStorage));
 
     $scope.getPerc = function(){
       return ($scope.aboutMeStorage.points%100)
