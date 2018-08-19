@@ -163,3 +163,9 @@ angular.module('homeMenu', ['ionic'])
     }
 
 })
+
+//seeing users
+//https://game.anomoz.com/api/post/user_read.php
+
+//create users
+//https://game.anomoz.com/api/post/user_create.php
