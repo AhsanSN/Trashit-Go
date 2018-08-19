@@ -162,7 +162,15 @@ angular.module('homeMenu', ['ionic'])
 
     $scope.payoutStorage = payoutStorage;
 
-      window.localStorage.setItem("payoutStorage", JSON.stringify(payoutStorage));
+    window.localStorage.setItem("payoutStorage", JSON.stringify(payoutStorage));
+
+    $scope.getPerc = function(){
+      return ($scope.aboutMeStorage.points%100)
+    }
+
+    $scope.getLevel = function(){
+      return ($scope.aboutMeStorage.level)
+    }
 
  })
 
