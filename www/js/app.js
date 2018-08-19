@@ -2,7 +2,7 @@ angular.module('homeMenu', ['ionic'])
 
   .controller('homeMenuCtrl', function ($scope) {
 
-
+    $scope.aboutMeStorage = JSON.parse(localStorage.getItem('aboutMeStorage'));
 
     // quit app
     $scope.quitApp = function () {
@@ -19,23 +19,26 @@ angular.module('homeMenu', ['ionic'])
       "level": 1,
       "points": 100,
       "products": {
-        "seadbombs": [{
-          "apple": {
+        "seedbombs": [
+          {
+            "name": "apple",
             "quantity": 0,
             "imageUrl": "www.google.com"
           },
-          "mango": {
+          {
+            "name": "mango",
             "quantity": 0,
             "imageUrl": "www.google.com"
           },
-          "banana": {
+          {
+            "name": "banana",
             "quantity": 0,
             "imageUrl": "www.google.com"
           },
-          "peach": {
+          {
+            "name": "peach",
             "quantity": 0,
             "imageUrl": "www.google.com"
-          }
         }]
       }
     }
