@@ -71,16 +71,20 @@ angular.module('homeMenu', ['ionic'])
     }
 
     $scope.test = function(){
-      //window.localStorage.setItem("number", JSON.stringify({ 'one': 1, 'two': 2, 'three': 3 }));
+      window.localStorage.setItem("number", JSON.stringify({ 'one': 1, 'two': 2, 'three': 3 }));
       var retrievedObject = localStorage.getItem('number');
 
       console.log(localStorage.getItem('number'))
+      console.log("changing")
 
-      console.log(JSON.parse(retrievedObject).one)
-      console.log($scope.projects);
+      var a = JSON.parse(retrievedObject)
+      a.one = 742
+      console.log("a",a)
+      window.localStorage.setItem("number", JSON.stringify(a))
+      console.log(localStorage.getItem('number'));
     }
 
-    $scope.test();
+    //$scope.test();
 
     //leaderboard
 
