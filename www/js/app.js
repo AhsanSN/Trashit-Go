@@ -2,16 +2,53 @@ angular.module('homeMenu', ['ionic'])
 
   .controller('homeMenuCtrl', function ($scope) {
 
+
+
     // quit app
     $scope.quitApp = function () {
       console.log("quit")
       ionic.Platform.exitApp();
     };
 
+    //signup
     $scope.formPhoneNumber = function (name, phonenumber) {
+
+      $scope.aboutMeStorage = {
+      "name": "User",
+      "phoneNumber": "0000",
+      "level": 1,
+      "points": 100,
+      "products": {
+        "seadbombs": [{
+          "apple": {
+            "quantity": 0,
+            "imageUrl": "www.google.com"
+          },
+          "mango": {
+            "quantity": 0,
+            "imageUrl": "www.google.com"
+          },
+          "banana": {
+            "quantity": 0,
+            "imageUrl": "www.google.com"
+          },
+          "peach": {
+            "quantity": 0,
+            "imageUrl": "www.google.com"
+          }
+        }]
+      }
+    }
+    window.localStorage.setItem("aboutMeStorage", JSON.stringify(aboutMeStorage));
+
       console.log("formPhoneNumber")
       console.log("name", name)
       console.log("phonenumber", phonenumber)
+
+      var retrievedAboutMeStorage = localStorage.getItem('aboutMeStorage');
+      console.log(JSON.parse(retrievedObject).one)
+
+
       window.localStorage.setItem('phoneNumber',phonenumber)
       window.localStorage.setItem('username',name)
       //if validated
