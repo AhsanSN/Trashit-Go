@@ -167,6 +167,30 @@ angular.module('homeMenu', ['ionic'])
         xmlHttp.send(null);
     }
 
+    $scope.test1 = function(){
+        /**
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+            console.log("created: ", xmlHttp.responseText)
+        }
+        xmlHttp.open("POST", "https://game.anomoz.com/api/post/user_create.php", true); // true for asynchronous 
+        xmlHttp.send({"name": "send sowk"});
+        **/
+        
+        var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
+        xmlhttp.open("POST", "https://game.anomoz.com/api/post/user_create.php");
+        xmlhttp.send(JSON.stringify({"name":"User",
+            "phoneNumber":"0000",
+            "level":"1",
+            "points":"135",
+            "prod_apple":"0",
+            "prod_mango":"0",
+            "prod_banana":"0",
+            "prod_peach":"0"}));
+    }
+
+    $scope.test1();
 })
 
 
