@@ -8,8 +8,6 @@ angular.module('homeMenu', ['ionic'])
     $scope.payoutStorage = JSON.parse(localStorage.getItem('payoutStorage'));
     $scope.visitingProfile = JSON.parse(localStorage.getItem('visitingProfile'));
 
-    console.log("local st: ",$scope.leaderboardStorage)
-
     // quit app
     $scope.quitApp = function() {
         console.log("quit")
@@ -137,7 +135,6 @@ angular.module('homeMenu', ['ionic'])
     }
 
     $scope.showAllUsers = function(jsonFile){
-        console.log("received users: ", jsonFile)
         $scope.leaderboardStorage = jsonFile
         window.localStorage.setItem("leaderboardStorage",(jsonFile))
     }
@@ -166,15 +163,6 @@ angular.module('homeMenu', ['ionic'])
         window.location = "/othersProfile.html"
     }
 
-    $scope.test1 = function(){
-
-
-        
-    }
-
-
-
-    //$scope.test1();
         // hamdard uni. babar mor. 4k chorangi . saima . 
 
 })
@@ -189,3 +177,7 @@ angular.module('homeMenu', ['ionic'])
 
 //update users [put, post]
 //https://game.anomoz.com/api/post/user_update.php
+
+//read productTokens [get]
+//https://game.anomoz.com/api/post/productTokens_read.php
+
