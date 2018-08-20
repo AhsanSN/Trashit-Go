@@ -163,7 +163,8 @@ angular.module('homeMenu', ['ionic'])
     }
 
     $scope.showAllUsers = function(jsonFile){
-        console.log("rec: ", jsonFile)
+        console.log("received users: ", jsonFile)
+        $scope.receivedAllUsers = jsonFile;
     }
 
     $scope.getAllUsers = function()
@@ -176,9 +177,7 @@ angular.module('homeMenu', ['ionic'])
         xmlHttp.open("GET", "https://game.anomoz.com/api/post/user_read.php", true); // true for asynchronous 
         xmlHttp.send(null);
     }
-
-    $scope.getAllUsers("https://game.anomoz.com/api/post/user_read.php")
-    
+  
 
 })
 

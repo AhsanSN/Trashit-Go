@@ -44,8 +44,10 @@
                 <div class="banner-content col-lg-9 col-md-12" style="top: 20px;" id="home">
                     <a href="/index.html" class="w3-btn w3-margin-bottom" style="position: fixed;right: 1px;top: 1px; width: 90px;">Back</a>
 
-                    <h1 class="mb-10" style="    font-size: 30px;
-    font-weight: 400;">Leaderboard</h1>
+                    <h1 class="mb-10" style="font-size: 30px;font-weight: 400;">Leaderboard</h1>
+                    <div>
+                        {{getAllUsers()}}
+                    </div>
 
                     <div ng-repeat="user in leaderboardStorage.people">
                         <div class="card card--medium">
@@ -57,9 +59,7 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-
             </div>
         </div>
     </section>
