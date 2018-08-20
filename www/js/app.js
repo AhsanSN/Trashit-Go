@@ -103,12 +103,17 @@ angular.module('homeMenu', ['ionic'])
         console.log("edited value", retrievedAboutMeStorage)
         window.localStorage.setItem("aboutMeStorage", JSON.stringify(retrievedAboutMeStorage))
 
+        // uploading user to global db
+        var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
+        xmlhttp.open("POST", "https://game.anomoz.com/api/post/user_create.php");
+        xmlhttp.send(JSON.stringify(retrievedAboutMeStorage));
+
         //if validated
         $("#home").fadeOut()
         $("#accountCreated").fadeIn()
 
         //after 2 sec
-        //window.location = "/index.html"
+        window.location = "/index.html"
     }
     $scope.checkHomeRedirect = function() {
         var retrievedAboutMeStorage = JSON.parse(localStorage.getItem('aboutMeStorage'));
@@ -177,17 +182,8 @@ angular.module('homeMenu', ['ionic'])
         xmlHttp.open("POST", "https://game.anomoz.com/api/post/user_create.php", true); // true for asynchronous 
         xmlHttp.send({"name": "send sowk"});
         **/
+
         
-        var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
-        xmlhttp.open("POST", "https://game.anomoz.com/api/post/user_create.php");
-        xmlhttp.send(JSON.stringify({"name":"User",
-            "phoneNumber":"0000",
-            "level":"1",
-            "points":"135",
-            "prod_apple":"0",
-            "prod_mango":"0",
-            "prod_banana":"0",
-            "prod_peach":"0"}));
     }
 
     $scope.test1();
