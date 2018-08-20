@@ -7,6 +7,8 @@ angular.module('homeMenu', ['ionic'])
     $scope.storeStorage = JSON.parse(localStorage.getItem('storeStorage'));
     $scope.payoutStorage = JSON.parse(localStorage.getItem('payoutStorage'));
 
+    console.log("local st: ",$scope.leaderboardStorage)
+
     // quit app
     $scope.quitApp = function() {
         console.log("quit")
@@ -132,6 +134,7 @@ angular.module('homeMenu', ['ionic'])
             document.getElementById("home").style.display = "block";
             console.log(" no redirect")
         }
+        $scope.getAllUsers();
     }
 
     $scope.test = function() {
@@ -164,7 +167,8 @@ angular.module('homeMenu', ['ionic'])
 
     $scope.showAllUsers = function(jsonFile){
         console.log("received users: ", jsonFile)
-        $scope.receivedAllUsers = jsonFile;
+        $scope.leaderboardStorage = jsonFile
+        window.localStorage.setItem("leaderboardStorage",(jsonFile))
     }
 
     $scope.getAllUsers = function()
@@ -177,7 +181,6 @@ angular.module('homeMenu', ['ionic'])
         xmlHttp.open("GET", "https://game.anomoz.com/api/post/user_read.php", true); // true for asynchronous 
         xmlHttp.send(null);
     }
-  
 
 })
 
