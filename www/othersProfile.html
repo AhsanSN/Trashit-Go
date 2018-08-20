@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+    <style type="text/css">
+
+    </style>
+
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/fav.png">
+    <!-- Author Meta -->
+    <meta name="author" content="Anomoz">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>ePaste - Easy Paste</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+    <!--
+      CSS
+      ============================================= -->
+    <link rel="stylesheet" href="css/linearicons.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/list.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+
+<body ng-app="homeMenu" ng-controller="homeMenuCtrl">
+
+    <section class="banner-area relative">
+        <div class="overlay overlay-bg"></div>
+        <div class="container">
+            <div class="row fullscreen d-flex justify-content-center align-items-center">
+                <div class="banner-content col-lg-9 col-md-12 justify-content-center" style="top: -5vh; display: none;" id="home">
+                    <a href="/about.html" class="w3-btn w3-margin-bottom" style="position: fixed;right: 1px;top: 1px; width: 90px;">About</a>
+
+                    <h1 class="mb-10" style="    font-size: 30px;
+    font-weight: 400;">Dashboard</h1>
+                    <div class="w3-light-grey w3-round-xlarge">
+                        <div class="w3-container w3-blue w3-round-xlarge" style="width:{{getPerc()}}%">{{getPerc()}}%</div>
+                    </div>
+                    <br>
+                    <p class="progress-p">Level {{aboutMeStorage.level}}</p>
+                    <div class="container">
+
+                        <p class="mx-auto" style="color: white; margin: 30px 0 0 0; font-size: 20px;">
+                            Your green collection.
+                        </p>
+                        <br>
+                        <div class="center">
+                            <div class="seedBombCollection" style="display: block;">
+                                    <div ng-if="aboutMeStorage.prod_apple == 0">
+                                        <style>
+                                            img {
+                                                -webkit-filter: grayscale(100%);
+                                                /* Safari 6.0 - 9.0 */
+                                                filter: grayscale(100%);
+                                            }
+                                        </style>
+                                        <!-- code to render a large video block-->
+                                    </div>
+                                    <figure class="bombImg">
+                                        <img id="profile-img" src="https://lh6.googleusercontent.com/--2fS4T8kO6k/AAAAAAAAAAI/AAAAAAAAAAA/AB6qoq2DVOW0W3Xlm3tLINHu-rc4Jd2jLQ/s96-c/photo.jpg" class="bombI" alt="seed bomb">
+                                        <figcaption>x{{aboutMeStorage.prod_apple}}</figcaption>
+                                    </figure>
+
+                                    <div ng-if="aboutMeStorage.prod_mango == 0">
+                                        <style>
+                                            img {
+                                                -webkit-filter: grayscale(100%);
+                                                /* Safari 6.0 - 9.0 */
+                                                filter: grayscale(100%);
+                                            }
+                                        </style>
+                                        <!-- code to render a large video block-->
+                                    </div>
+                                    <figure class="bombImg">
+                                        <img id="profile-img" src="https://lh6.googleusercontent.com/--2fS4T8kO6k/AAAAAAAAAAI/AAAAAAAAAAA/AB6qoq2DVOW0W3Xlm3tLINHu-rc4Jd2jLQ/s96-c/photo.jpg" class="bombI" alt="seed bomb">
+                                        <figcaption>x{{aboutMeStorage.prod_mango}}</figcaption>
+                                    </figure>
+
+                                    <div ng-if="aboutMeStorage.prod_banana == 0">
+                                        <style>
+                                            img {
+                                                -webkit-filter: grayscale(100%);
+                                                /* Safari 6.0 - 9.0 */
+                                                filter: grayscale(100%);
+                                            }
+                                        </style>
+                                        <!-- code to render a large video block-->
+                                    </div>
+                                    <figure class="bombImg">
+                                        <img id="profile-img" src="https://lh6.googleusercontent.com/--2fS4T8kO6k/AAAAAAAAAAI/AAAAAAAAAAA/AB6qoq2DVOW0W3Xlm3tLINHu-rc4Jd2jLQ/s96-c/photo.jpg" class="bombI" alt="seed bomb">
+                                        <figcaption>x{{aboutMeStorage.prod_banana}}</figcaption>
+                                    </figure>
+
+                                    <div ng-if="aboutMeStorage.prod_peach == 0">
+                                        <style>
+                                            img {
+                                                -webkit-filter: grayscale(100%);
+                                                /* Safari 6.0 - 9.0 */
+                                                filter: grayscale(100%);
+                                            }
+                                        </style>
+                                        <!-- code to render a large video block-->
+                                    </div>
+                                    <figure class="bombImg">
+                                        <img id="profile-img" src="https://lh6.googleusercontent.com/--2fS4T8kO6k/AAAAAAAAAAI/AAAAAAAAAAA/AB6qoq2DVOW0W3Xlm3tLINHu-rc4Jd2jLQ/s96-c/photo.jpg" class="bombI" alt="seed bomb">
+                                        <figcaption>x{{aboutMeStorage.prod_peach}}</figcaption>
+                                    </figure>
+
+                            </div>
+                            <br>
+
+                        </div>
+                        <br>
+                        <a href="/leaderboard.html" class="w3-btn" style="margin:24px 0 4px 0;">Leaderboard</a>
+                        <br>
+                        <a href="/store.html" class="w3-btn" style="margin: 4px">Store</a>
+                        <br>
+                        <a href="/payouts.html" class="w3-btn" style="margin: 4px">Payouts</a>
+                        <br>
+
+                    </div>
+                    <p style="color: white; margin-top: 10px;">Tip: Visit the 'Payout' section to get free seed bombs.</p>
+
+                </div>
+                <div>
+                    {{checkHomeRedirect();}}
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- End banner Area -->
+
+    <script src="js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/progressBar.js"></script>
+    <script src="cordova.js"></script>
+
+</body>
+
+</html>

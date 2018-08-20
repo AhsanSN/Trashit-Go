@@ -53,7 +53,7 @@
                             <h2 class="card__title">{{user.name}}</h2>
                             <p class="card_p">Level {{user.level}}</p>
                             <div class="card__action-bar">
-                                <button class="card__button">View Profile</button>
+                                <button class="card__button" ng-click="visitProfile(user.id)">View Profile</button>
                             </div>
                         </div>
                     </div>
