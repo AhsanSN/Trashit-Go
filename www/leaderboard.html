@@ -47,7 +47,7 @@
                     <h1 class="mb-10" style="font-size: 30px;font-weight: 400;">Leaderboard</h1>
 
 
-                    <div ng-repeat="user in leaderboardStorage">
+                    <div ng-repeat="user in leaderboardStorage  | orderBy : 'level':true">
                         <div class="card card--medium">
                             <div class="card__image" style="background-image: url(https://placeimg.com/640/480/nature);"></div>
                             <h2 class="card__title">{{user.name}}</h2>

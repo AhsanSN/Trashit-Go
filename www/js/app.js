@@ -181,3 +181,5 @@ angular.module('homeMenu', ['ionic'])
 //read productTokens [get]
 //https://game.anomoz.com/api/post/productTokens_read.php
 
+//update productTokens [put, post]
+//https://game.anomoz.com/api/post/productTokens_update.php
