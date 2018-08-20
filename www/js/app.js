@@ -6,6 +6,7 @@ angular.module('homeMenu', ['ionic'])
     $scope.leaderboardStorage = JSON.parse(localStorage.getItem('leaderboardStorage'));
     $scope.storeStorage = JSON.parse(localStorage.getItem('storeStorage'));
     $scope.payoutStorage = JSON.parse(localStorage.getItem('payoutStorage'));
+    $scope.visitingProfile = JSON.parse(localStorage.getItem('visitingProfile'));
 
     console.log("local st: ",$scope.leaderboardStorage)
 
@@ -127,26 +128,6 @@ angular.module('homeMenu', ['ionic'])
         $scope.getAllUsers();
     }
 
-    $scope.test = function() {
-        window.localStorage.setItem("number", JSON.stringify({
-            'one': 1,
-            'two': 2,
-            'three': 3
-        }));
-        var retrievedObject = localStorage.getItem('number');
-
-        console.log(localStorage.getItem('number'))
-        console.log("changing")
-
-        var a = JSON.parse(retrievedObject)
-        a.one = 742
-        console.log("a", a)
-        window.localStorage.setItem("number", JSON.stringify(a))
-        console.log(localStorage.getItem('number'));
-    }
-
-    //$scope.test();
-
     $scope.getPerc = function() {
         return ($scope.aboutMeStorage.points % 100)
     }
@@ -172,19 +153,26 @@ angular.module('homeMenu', ['ionic'])
         xmlHttp.send(null);
     }
 
-    $scope.test1 = function(){
-        /**
-        var xmlHttp = new XMLHttpRequest();
-        xmlHttp.onreadystatechange = function() { 
-        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-            console.log("created: ", xmlHttp.responseText)
+    $scope.visitProfile = function(profileId){
+        console.log("visiting profile: ", profileId )
+
+        for (var i=0; i < $scope.leaderboardStorage.length; i++) {
+            console.log("a")
+            if ($scope.leaderboardStorage[i].id == profileId){
+                console.log($scope.leaderboardStorage[i])
+                window.localStorage.setItem("visitingProfile", JSON.stringify($scope.leaderboardStorage[i]))
+            }
         }
-        xmlHttp.open("POST", "https://game.anomoz.com/api/post/user_create.php", true); // true for asynchronous 
-        xmlHttp.send({"name": "send sowk"});
-        **/
+        window.location = "/othersProfile.html"
+    }
+
+    $scope.test1 = function(){
+
 
         
     }
+
+
 
     //$scope.test1();
         // hamdard uni. babar mor. 4k chorangi . saima . 

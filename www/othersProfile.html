@@ -44,25 +44,25 @@
         <div class="overlay overlay-bg"></div>
         <div class="container">
             <div class="row fullscreen d-flex justify-content-center align-items-center">
-                <div class="banner-content col-lg-9 col-md-12 justify-content-center" style="top: -5vh; display: none;" id="home">
+                <div class="banner-content col-lg-9 col-md-12 justify-content-center" style="top: -5vh;" id="home">
                     <a href="/about.html" class="w3-btn w3-margin-bottom" style="position: fixed;right: 1px;top: 1px; width: 90px;">About</a>
 
                     <h1 class="mb-10" style="    font-size: 30px;
-    font-weight: 400;">Dashboard</h1>
+    font-weight: 400;">{{visitingProfile.name}}'s Profile</h1>
                     <div class="w3-light-grey w3-round-xlarge">
-                        <div class="w3-container w3-blue w3-round-xlarge" style="width:{{getPerc()}}%">{{getPerc()}}%</div>
+                        <div class="w3-container w3-blue w3-round-xlarge" style="width:{{visitingProfile.points%100}}%">{{visitingProfile.points%100}}%</div>
                     </div>
                     <br>
-                    <p class="progress-p">Level {{aboutMeStorage.level}}</p>
+                    <p class="progress-p">Level {{visitingProfile.level}}</p>
                     <div class="container">
 
                         <p class="mx-auto" style="color: white; margin: 30px 0 0 0; font-size: 20px;">
-                            Your green collection.
+                            Their green collection.
                         </p>
                         <br>
                         <div class="center">
                             <div class="seedBombCollection" style="display: block;">
-                                    <div ng-if="aboutMeStorage.prod_apple == 0">
+                                    <div ng-if="visitingProfile.prod_apple == 0">
                                         <style>
                                             img {
                                                 -webkit-filter: grayscale(100%);
@@ -74,10 +74,10 @@
                                     </div>
                                     <figure class="bombImg">
                                         <img id="profile-img" src="https://lh6.googleusercontent.com/--2fS4T8kO6k/AAAAAAAAAAI/AAAAAAAAAAA/AB6qoq2DVOW0W3Xlm3tLINHu-rc4Jd2jLQ/s96-c/photo.jpg" class="bombI" alt="seed bomb">
-                                        <figcaption>x{{aboutMeStorage.prod_apple}}</figcaption>
+                                        <figcaption>x{{visitingProfile.prod_apple}}</figcaption>
                                     </figure>
 
-                                    <div ng-if="aboutMeStorage.prod_mango == 0">
+                                    <div ng-if="visitingProfile.prod_mango == 0">
                                         <style>
                                             img {
                                                 -webkit-filter: grayscale(100%);
@@ -89,10 +89,10 @@
                                     </div>
                                     <figure class="bombImg">
                                         <img id="profile-img" src="https://lh6.googleusercontent.com/--2fS4T8kO6k/AAAAAAAAAAI/AAAAAAAAAAA/AB6qoq2DVOW0W3Xlm3tLINHu-rc4Jd2jLQ/s96-c/photo.jpg" class="bombI" alt="seed bomb">
-                                        <figcaption>x{{aboutMeStorage.prod_mango}}</figcaption>
+                                        <figcaption>x{{visitingProfile.prod_mango}}</figcaption>
                                     </figure>
 
-                                    <div ng-if="aboutMeStorage.prod_banana == 0">
+                                    <div ng-if="visitingProfile.prod_banana == 0">
                                         <style>
                                             img {
                                                 -webkit-filter: grayscale(100%);
@@ -104,10 +104,10 @@
                                     </div>
                                     <figure class="bombImg">
                                         <img id="profile-img" src="https://lh6.googleusercontent.com/--2fS4T8kO6k/AAAAAAAAAAI/AAAAAAAAAAA/AB6qoq2DVOW0W3Xlm3tLINHu-rc4Jd2jLQ/s96-c/photo.jpg" class="bombI" alt="seed bomb">
-                                        <figcaption>x{{aboutMeStorage.prod_banana}}</figcaption>
+                                        <figcaption>x{{visitingProfile.prod_banana}}</figcaption>
                                     </figure>
 
-                                    <div ng-if="aboutMeStorage.prod_peach == 0">
+                                    <div ng-if="visitingProfile.prod_peach == 0">
                                         <style>
                                             img {
                                                 -webkit-filter: grayscale(100%);
@@ -119,27 +119,16 @@
                                     </div>
                                     <figure class="bombImg">
                                         <img id="profile-img" src="https://lh6.googleusercontent.com/--2fS4T8kO6k/AAAAAAAAAAI/AAAAAAAAAAA/AB6qoq2DVOW0W3Xlm3tLINHu-rc4Jd2jLQ/s96-c/photo.jpg" class="bombI" alt="seed bomb">
-                                        <figcaption>x{{aboutMeStorage.prod_peach}}</figcaption>
+                                        <figcaption>x{{visitingProfile.prod_peach}}</figcaption>
                                     </figure>
 
                             </div>
                             <br>
 
                         </div>
-                        <br>
-                        <a href="/leaderboard.html" class="w3-btn" style="margin:24px 0 4px 0;">Leaderboard</a>
-                        <br>
-                        <a href="/store.html" class="w3-btn" style="margin: 4px">Store</a>
-                        <br>
-                        <a href="/payouts.html" class="w3-btn" style="margin: 4px">Payouts</a>
-                        <br>
-
-                    </div>
-                    <p style="color: white; margin-top: 10px;">Tip: Visit the 'Payout' section to get free seed bombs.</p>
 
                 </div>
                 <div>
-                    {{checkHomeRedirect();}}
                 </div>
 
             </div>
