@@ -162,7 +162,27 @@ angular.module('homeMenu', ['ionic'])
         return ($scope.aboutMeStorage.level)
     }
 
+    $scope.showAllUsers = function(jsonFile){
+        console.log("rec: ", jsonFile)
+    }
+
+    $scope.getAllUsers = function()
+    {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+            $scope.showAllUsers(xmlHttp.responseText)
+        }
+        xmlHttp.open("GET", "https://game.anomoz.com/api/post/user_read.php", true); // true for asynchronous 
+        xmlHttp.send(null);
+    }
+
+    $scope.getAllUsers("https://game.anomoz.com/api/post/user_read.php")
+    
+
 })
+
+
 
 //read users [get]
 //https://game.anomoz.com/api/post/user_read.php
