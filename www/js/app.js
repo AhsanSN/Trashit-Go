@@ -186,7 +186,9 @@ angular.module('homeMenu', ['ionic'])
         
     }
 
-    $scope.test1();
+    //$scope.test1();
+        // hamdard uni. babar mor. 4k chorangi . saima . 
+
 })
 
 
