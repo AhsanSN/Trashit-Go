@@ -21,29 +21,14 @@ angular.module('homeMenu', ['ionic'])
         //auth here (above this)
 
         var aboutMeStorage = {
-            "name": "User",
-            "phoneNumber": "0000",
-            "level": 1,
-            "points": 135,
-            "products": {
-                "seedbombs": [{
-                    "name": "apple",
-                    "quantity": 0,
-                    "imageUrl": "www.google.com"
-                }, {
-                    "name": "mango",
-                    "quantity": 0,
-                    "imageUrl": "www.google.com"
-                }, {
-                    "name": "banana",
-                    "quantity": 0,
-                    "imageUrl": "www.google.com"
-                }, {
-                    "name": "peach",
-                    "quantity": 0,
-                    "imageUrl": "www.google.com"
-                }]
-            }
+            "name":"User",
+            "phoneNumber":"0000",
+            "level":"1",
+            "points":"135",
+            "prod_apple":"0",
+            "prod_mango":"0",
+            "prod_banana":"0",
+            "prod_peach":"0"
         }
         $scope.aboutMeStorage = aboutMeStorage
 
