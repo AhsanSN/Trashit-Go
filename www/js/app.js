@@ -187,7 +187,7 @@ angular.module('homeMenu', ['ionic'])
         window.location = "/othersProfile.html"
     }
 
-    $scope.verifyToken("test");
+    console.log($scope.verifyToken("satest"))
 
 
 })
