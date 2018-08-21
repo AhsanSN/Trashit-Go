@@ -1,6 +1,6 @@
 angular.module('homeMenu', ['ionic'])
 
-.controller('homeMenuCtrl', function($scope) {
+.controller('homeMenuCtrl', function($scope, $ionicModal) {
 
     $scope.aboutMeStorage = JSON.parse(localStorage.getItem('aboutMeStorage'));
     $scope.leaderboardStorage = JSON.parse(localStorage.getItem('leaderboardStorage'));
@@ -187,7 +187,20 @@ angular.module('homeMenu', ['ionic'])
         window.location = "/othersProfile.html"
     }
 
-    console.log($scope.verifyToken("satest"))
+    //console.log($scope.verifyToken("satest"))
+
+    $ionicModal.fromTemplateUrl('chatModal.html', function (modal) {
+      $scope.taskModal = modal;
+      console.log("chatModal.html loaded")
+    }, {
+        scope: $scope,
+        animation: 'slide-in-left'
+    });
+
+    $scope.showKeyModal = function(){
+        $scope.taskModal.show();
+    }
+
 
 
 })
