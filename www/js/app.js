@@ -150,6 +150,16 @@ angular.module('homeMenu', ['ionic'])
         xmlHttp.send(null);
     }
 
+    $scope.verifyToken = function(token){
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+            console.log("all tokens:", xmlHttp.responseText)
+        }
+        xmlHttp.open("GET", "https://game.anomoz.com/api/post/productTokens_read.php", true); // true for asynchronous 
+        xmlHttp.send(null);
+    }
+
     $scope.visitProfile = function(profileId){
         console.log("visiting profile: ", profileId )
 
@@ -163,7 +173,8 @@ angular.module('homeMenu', ['ionic'])
         window.location = "/othersProfile.html"
     }
 
-        // hamdard uni. babar mor. 4k chorangi . saima . 
+    $scope.verifyToken("a");
+
 
 })
 
