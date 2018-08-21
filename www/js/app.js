@@ -154,10 +154,24 @@ angular.module('homeMenu', ['ionic'])
         var xmlHttp = new XMLHttpRequest();
         xmlHttp.onreadystatechange = function() { 
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-            console.log("all tokens:", xmlHttp.responseText)
+        {
+            var receivedTokens =  xmlHttp.responseText;
+            //validate
+            
+            receivedTokens = JSON.parse(receivedTokens)
+            for (var i = 0; i < receivedTokens.length; i++) {
+                if (receivedTokens[i].token == token) {
+                    console.log("verified: ", receivedTokens[i])
+                    return true
+                }
+            }
+            return false;
+        }
+            
         }
         xmlHttp.open("GET", "https://game.anomoz.com/api/post/productTokens_read.php", true); // true for asynchronous 
         xmlHttp.send(null);
+
     }
 
     $scope.visitProfile = function(profileId){
@@ -173,7 +187,7 @@ angular.module('homeMenu', ['ionic'])
         window.location = "/othersProfile.html"
     }
 
-    $scope.verifyToken("a");
+    $scope.verifyToken("test");
 
 
 })
