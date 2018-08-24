@@ -113,7 +113,8 @@ angular.module('homeMenu', ['ionic'])
 
         //after 2 sec
         window.location = "/index.html"
-    }
+    };
+
     $scope.checkHomeRedirect = function() {
         var retrievedAboutMeStorage = JSON.parse(localStorage.getItem('aboutMeStorage'));
         if (retrievedAboutMeStorage.name == "User") {
@@ -139,8 +140,7 @@ angular.module('homeMenu', ['ionic'])
         window.localStorage.setItem("leaderboardStorage",(jsonFile))
     }
 
-    $scope.getAllUsers = function()
-    {
+    $scope.getAllUsers = function(){
         var xmlHttp = new XMLHttpRequest();
         xmlHttp.onreadystatechange = function() { 
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
@@ -186,8 +186,6 @@ angular.module('homeMenu', ['ionic'])
         }
         window.location = "/othersProfile.html"
     }
-
-    console.log($scope.verifyToken("satest"))
 
 
 })
