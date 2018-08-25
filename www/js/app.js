@@ -161,10 +161,15 @@ angular.module('homeMenu', ['ionic'])
             receivedTokens = JSON.parse(receivedTokens)
             for (var i = 0; i < receivedTokens.length; i++) {
                 if (receivedTokens[i].token == token) {
+                    document.getElementById("keyFail").style.display = "none";
+                    document.getElementById("keySucc").style.display = "block";
                     console.log("verified: ", receivedTokens[i])
                     return true
                 }
             }
+            console.log("not verified")
+            document.getElementById("keySucc").style.display = "none";
+            document.getElementById("keyFail").style.display = "block";
             return false;
         }
             
@@ -186,8 +191,6 @@ angular.module('homeMenu', ['ionic'])
         }
         window.location = "/othersProfile.html"
     }
-
-    console.log($scope.verifyToken("satest"))
 
 })
 
