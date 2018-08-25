@@ -189,7 +189,6 @@ angular.module('homeMenu', ['ionic'])
 
     console.log($scope.verifyToken("satest"))
 
-
 })
 
 
