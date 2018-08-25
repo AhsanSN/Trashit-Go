@@ -192,6 +192,13 @@ angular.module('homeMenu', ['ionic'])
         window.location = "/othersProfile.html"
     }
 
+    $scope.getProdFromKey = function(key){
+        var prefix = key.slice(0, 2);
+        console.log(prefix)
+    }
+
+    $scope.getProdFromKey("test");
+
 })
 
 
