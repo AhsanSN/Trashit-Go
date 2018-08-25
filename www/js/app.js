@@ -195,6 +195,19 @@ angular.module('homeMenu', ['ionic'])
     $scope.getProdFromKey = function(key){
         var prefix = key.slice(0, 2);
         console.log(prefix)
+
+        var product;
+        switch (prefix) {
+            case "AS":
+                product = "Apple Seed";
+                break;
+            case "MS":
+                product = "Mango Seed";
+                break;
+            default:
+                product = "Error! No product found.";
+        }
+        console.log(product)
     }
 
     $scope.getProdFromKey("test");
