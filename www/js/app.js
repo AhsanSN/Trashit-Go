@@ -17,6 +17,11 @@ angular.module('homeMenu', ['ionic'])
     //signup
     $scope.formPhoneNumber = function(name, phonenumber) {
 
+        if ((name=="")||((phonenumber.length)<8){
+            //invalid cred
+            
+        }
+
         //auth here (above this)
 
         var aboutMeStorage = {
@@ -217,9 +222,7 @@ angular.module('homeMenu', ['ionic'])
             default:
                 product = "Error! No product found.";
         }
-        console.log(product)
-
-        
+        console.log(product)      
         
         console.log("edited value", retrievedAboutMeStorage)
         window.localStorage.setItem("aboutMeStorage", JSON.stringify(retrievedAboutMeStorage))
