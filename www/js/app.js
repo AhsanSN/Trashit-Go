@@ -202,14 +202,17 @@ angular.module('homeMenu', ['ionic'])
             case "PA":
                 product = "prod_apple";
                 retrievedAboutMeStorage.prod_apple = parseInt(retrievedAboutMeStorage.prod_apple) + 1;
+                retrievedAboutMeStorage.points = parseInt(retrievedAboutMeStorage.points) + 12; //adds points
                 break;
             case "PM":
                 product = "prod_mango";
                 retrievedAboutMeStorage.prod_mango = parseInt(retrievedAboutMeStorage.prod_mango) + 1;
+                retrievedAboutMeStorage.points = parseInt(retrievedAboutMeStorage.points) + 26; //adds points
                 break;
             case "PB":
                 product = "prod_banana";
                 retrievedAboutMeStorage.prod_banana = parseInt(retrievedAboutMeStorage.prod_banana) + 1;
+                retrievedAboutMeStorage.points = parseInt(retrievedAboutMeStorage.points) + 22; //adds points
                 break;
             default:
                 product = "Error! No product found.";
@@ -222,7 +225,14 @@ angular.module('homeMenu', ['ionic'])
         window.localStorage.setItem("aboutMeStorage", JSON.stringify(retrievedAboutMeStorage))
     }
 
-    $scope.getProdFromKey("MAajsdb");
+    $scope.addPoints = function(points){
+        var retrievedAboutMeStorage = JSON.parse(localStorage.getItem('aboutMeStorage'));
+        retrievedAboutMeStorage.points = parseInt(retrievedAboutMeStorage.points) + points;
+        console.log("edited value", retrievedAboutMeStorage)
+        window.localStorage.setItem("aboutMeStorage", JSON.stringify(retrievedAboutMeStorage))
+    }
+
+    $scope.addPoints(1);
 
 })
 
