@@ -17,8 +17,9 @@ angular.module('homeMenu', ['ionic'])
     //signup
     $scope.formPhoneNumber = function(name, phonenumber) {
 
-        if ((name=="")||((phonenumber.length)<8){
+        if ((name=="")||(phonenumber.length)<8){
             //invalid cred
+            console.log("error auth");
             
         }
 
@@ -119,6 +120,7 @@ angular.module('homeMenu', ['ionic'])
         //after 2 sec
         window.location = "/index.html"
     }
+
     $scope.checkHomeRedirect = function() {
         var retrievedAboutMeStorage = JSON.parse(localStorage.getItem('aboutMeStorage'));
         if (retrievedAboutMeStorage.name == "User") {
@@ -144,8 +146,7 @@ angular.module('homeMenu', ['ionic'])
         window.localStorage.setItem("leaderboardStorage",(jsonFile))
     }
 
-    $scope.getAllUsers = function()
-    {
+    $scope.getAllUsers = function(){
         var xmlHttp = new XMLHttpRequest();
         xmlHttp.onreadystatechange = function() { 
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
@@ -235,7 +236,7 @@ angular.module('homeMenu', ['ionic'])
         window.localStorage.setItem("aboutMeStorage", JSON.stringify(retrievedAboutMeStorage))
     }
 
-    $scope.addPoints(1);
+    //$scope.addPoints(1);
 
 })
 
