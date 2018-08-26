@@ -195,22 +195,34 @@ angular.module('homeMenu', ['ionic'])
     $scope.getProdFromKey = function(key){
         var prefix = key.slice(0, 2);
         console.log(prefix)
-
+        
         var product;
+        var retrievedAboutMeStorage = JSON.parse(localStorage.getItem('aboutMeStorage'));
         switch (prefix) {
-            case "AS":
-                product = "Apple Seed";
+            case "PA":
+                product = "prod_apple";
+                retrievedAboutMeStorage.prod_apple = parseInt(retrievedAboutMeStorage.prod_apple) + 1;
                 break;
-            case "MS":
-                product = "Mango Seed";
+            case "PM":
+                product = "prod_mango";
+                retrievedAboutMeStorage.prod_mango = parseInt(retrievedAboutMeStorage.prod_mango) + 1;
+                break;
+            case "PB":
+                product = "prod_banana";
+                retrievedAboutMeStorage.prod_banana = parseInt(retrievedAboutMeStorage.prod_banana) + 1;
                 break;
             default:
                 product = "Error! No product found.";
         }
         console.log(product)
+
+        
+        
+        console.log("edited value", retrievedAboutMeStorage)
+        window.localStorage.setItem("aboutMeStorage", JSON.stringify(retrievedAboutMeStorage))
     }
 
-    $scope.getProdFromKey("test");
+    $scope.getProdFromKey("MAajsdb");
 
 })
 
