@@ -122,15 +122,21 @@ angular.module('homeMenu', ['ionic'])
     }
 
     $scope.checkHomeRedirect = function() {
-        var retrievedAboutMeStorage = JSON.parse(localStorage.getItem('aboutMeStorage'));
-        if (retrievedAboutMeStorage.name == "User") {
-            console.log("redirect")
-            window.location = "/signup.html"
-        } else {
-            document.getElementById("home").style.display = "block";
-            console.log(" no redirect")
+        try {
+            var retrievedAboutMeStorage = JSON.parse(localStorage.getItem('aboutMeStorage'));
+            if (retrievedAboutMeStorage.name == "User") {
+                console.log("redirect")
+                window.location = "/signup.html"
+            } else {
+                document.getElementById("home").style.display = "block";
+                console.log(" no redirect")
+            }
+            $scope.getAllUsers();
         }
-        $scope.getAllUsers();
+        catch(err) {
+            console.log(err)
+            window.location = "/signup.html";
+        }
     }
 
     $scope.getPerc = function() {
@@ -236,7 +242,8 @@ angular.module('homeMenu', ['ionic'])
         window.localStorage.setItem("aboutMeStorage", JSON.stringify(retrievedAboutMeStorage))
     }
 
-    //$scope.addPoints(1);
+    //$scope.checkHomeRedirect();
+    //window.location = "/signup.html"
 
 })
 
