@@ -242,6 +242,7 @@ angular.module('homeMenu', ['ionic'])
         window.localStorage.setItem("aboutMeStorage", JSON.stringify(retrievedAboutMeStorage))
     }
 
+    //leaderboadr
     $scope.toLeaderboardSecion = function(){
         document.getElementById("homeSection").style.display = "none"
         document.getElementById("leaderboardSection").style.display = "block"
@@ -252,6 +253,7 @@ angular.module('homeMenu', ['ionic'])
         document.getElementById("homeSection").style.display = "block"
     }
 
+    //store
     $scope.toStoreSecion = function(){
         document.getElementById("homeSection").style.display = "none"
         document.getElementById("storeSection").style.display = "block"
@@ -261,6 +263,18 @@ angular.module('homeMenu', ['ionic'])
         document.getElementById("storeSection").style.display = "none"
         document.getElementById("homeSection").style.display = "block"
     }
+
+    //payouts
+    $scope.toPayoutsSecion = function(){
+        document.getElementById("homeSection").style.display = "none"
+        document.getElementById("payoutsSection").style.display = "block"
+    }
+
+    $scope.fromPayoutsSecionToHome = function(){
+        document.getElementById("payoutsSection").style.display = "none"
+        document.getElementById("homeSection").style.display = "block"
+    }
+
 })
 
 
