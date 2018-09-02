@@ -248,8 +248,8 @@ angular.module('homeMenu', ['ionic'])
     }
 
     $scope.fromLeaderboardSecionToHome = function(){
-        document.getElementById("homeSection").style.display = "none"
-        document.getElementById("leaderboardSection").style.display = "block"
+        document.getElementById("leaderboardSection").style.display = "none"
+        document.getElementById("homeSection").style.display = "block"
     }
 })
 
