@@ -242,9 +242,15 @@ angular.module('homeMenu', ['ionic'])
         window.localStorage.setItem("aboutMeStorage", JSON.stringify(retrievedAboutMeStorage))
     }
 
-    //$scope.checkHomeRedirect();
-    //window.location = "/signup.html"
+    $scope.toLeaderboardSecion = function(){
+        document.getElementById("homeSection").style.display = "none"
+        document.getElementById("leaderboardSection").style.display = "block"
+    }
 
+    $scope.fromLeaderboardSecionToHome = function(){
+        document.getElementById("homeSection").style.display = "none"
+        document.getElementById("leaderboardSection").style.display = "block"
+    }
 })
 
 
