@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+    <style type="text/css">
+
+    </style>
+
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/fav.png">
+    <!-- Author Meta -->
+    <meta name="author" content="Anomoz">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>ePaste - Easy Paste</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+    <!--
+      CSS
+      ============================================= -->
+    <link rel="stylesheet" href="css/linearicons.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/list.css">
+
+</head>
+
+<body ng-app="homeMenu" ng-controller="homeMenuCtrl">
+
+    <!-- start banner Area -->
+    <section class="banner-area relative">
+        <div class="overlay overlay-bg"></div>
+        <div class="container">
+            <div class="row fullscreen d-flex justify-content-center align-items-center">
+                <div class="banner-content col-lg-9 col-md-12 justify-content-center" style="top: -90px;" id="home">
+                    <a href="/index.html" class="w3-btn w3-margin-bottom" style="position: fixed;right: 1px;top: 1px; width: 90px;">Back</a>
+
+                    <div class="container">
+                        <p class="mx-auto" style="color: white; margin: 30px 0 0 0; font-size: 20px;">
+                            Buy a Product.
+                        </p>
+                        <br>
+
+                        <div class=" col-lg-12 relative section-gap" style=" padding: 0 0px 0 0px; width: 100%;">
+                            <form ng-submit="buyProduct(product, phoneNumber)">
+
+                                    <select name="product" class="form-control form-control-lg input-block js-email-notice-trigger" style="height: 41px;">
+                                            <option value="apple">Apple Seed Bomb</option>
+                                            <option value="mango">Mango Seed Bomb</option>
+                                            <option value="banana">Banana Seed Bomb</option>
+                                            <option value="peach">Peach Seed Bomb</option>
+                                          </select>
+                                          <br>
+                                <input required="" type="text" class="form-control form-control-lg input-block js-email-notice-trigger" placeholder="Enter contact number" ng-model="phoneNumber">
+                                <br>
+                                <button type="submit" class="btn btn-primary">Buy!</button>
+                            </form>
+                        </div>
+
+                        <p style="color: white; margin-top: 10px;">This adds the product that you have bought to your app.</p>
+
+                        <p id="keySucc" style="color: green; font-size:20px; font-weight: 100; display: none;">Product has been added to you profile.</p>
+
+                        <p id="keyFail" style="color: red; font-size:20px; font-weight: 100; display: none;">Invalid product key</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End banner Area -->
+
+    <script src="js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="js/app.js"></script>
+    <script src="cordova.js"></script>
+</body>
+
+</html>
