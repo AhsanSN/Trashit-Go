@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/list.css">
+    <link rel="stylesheet" href="css/store.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 </head>
@@ -41,103 +42,206 @@
     <section class="banner-area relative">
         <div class="overlay overlay-bg"></div>
         <div class="container">
-            <div class="row fullscreen d-flex justify-content-center align-items-center">
-                <div class="banner-content col-lg-9 col-md-12 justify-content-center" style="display: none;" id="home">
-                    <a href="/about.html" class="w3-btn w3-margin-bottom" style="position: fixed;right: 1px;top: 1px; width: 90px;">About</a>
 
-                    <h1 class="mb-10" style="    font-size: 30px;
-    font-weight: 400;">Dashboard</h1>
-                    <div class="w3-light-grey w3-round-xlarge">
-                        <div class="w3-container w3-blue w3-round-xlarge" style="width:{{getPerc()}}%">{{getPerc()}}%</div>
-                    </div>
-                    <br>
-                    <p class="progress-p">Level {{aboutMeStorage.level}}</p>
-                    <div class="container">
+                <div id="homeSection" style="display: block">
+                    <div class="row fullscreen d-flex justify-content-center align-items-center">
+                    <div class="banner-content col-lg-9 col-md-12 justify-content-center" style="display: none;" id="home">
+                        <a href="/about.html" class="w3-btn w3-margin-bottom" style="position: fixed;right: 1px;top: 1px; width: 90px;">About</a>
 
-                        <p class="mx-auto" style="color: white; margin: 30px 0 0 0; font-size: 20px;">
-                            Your green collection.
-                        </p>
-                        <br>
-                        <div class="center">
-                            <div class="seedBombCollection" style="display: block;">
-                                    <div ng-if="aboutMeStorage.prod_apple == 0">
-                                        <style>
-                                            .img1 {
-                                                -webkit-filter: grayscale(100%);
-                                                /* Safari 6.0 - 9.0 */
-                                                filter: grayscale(100%);
-                                            }
-                                        </style>
-                                        <!-- code to render a large video block-->
-                                    </div>
-                                    <figure class="bombImg">
-                                        <img id="profile-img" src="https://lh6.googleusercontent.com/--2fS4T8kO6k/AAAAAAAAAAI/AAAAAAAAAAA/AB6qoq2DVOW0W3Xlm3tLINHu-rc4Jd2jLQ/s96-c/photo.jpg" class="bombI img1" alt="seed bomb">
-                                        <figcaption>x{{aboutMeStorage.prod_apple}}</figcaption>
-                                    </figure>
-
-                                    <div ng-if="aboutMeStorage.prod_mango == 0">
-                                        <style>
-                                            .img2 {
-                                                -webkit-filter: grayscale(100%);
-                                                /* Safari 6.0 - 9.0 */
-                                                filter: grayscale(100%);
-                                            }
-                                        </style>
-                                        <!-- code to render a large video block-->
-                                    </div>
-                                    <figure class="bombImg">
-                                        <img id="profile-img" src="https://lh6.googleusercontent.com/--2fS4T8kO6k/AAAAAAAAAAI/AAAAAAAAAAA/AB6qoq2DVOW0W3Xlm3tLINHu-rc4Jd2jLQ/s96-c/photo.jpg" class="bombI img2" alt="seed bomb">
-                                        <figcaption>x{{aboutMeStorage.prod_mango}}</figcaption>
-                                    </figure>
-
-                                    <div ng-if="aboutMeStorage.prod_banana == 0">
-                                        <style>
-                                            .img3 {
-                                                -webkit-filter: grayscale(100%);
-                                                /* Safari 6.0 - 9.0 */
-                                                filter: grayscale(100%);
-                                            }
-                                        </style>
-                                        <!-- code to render a large video block-->
-                                    </div>
-                                    <figure class="bombImg">
-                                        <img id="profile-img" src="https://lh6.googleusercontent.com/--2fS4T8kO6k/AAAAAAAAAAI/AAAAAAAAAAA/AB6qoq2DVOW0W3Xlm3tLINHu-rc4Jd2jLQ/s96-c/photo.jpg" class="bombI img3" alt="seed bomb">
-                                        <figcaption>x{{aboutMeStorage.prod_banana}}</figcaption>
-                                    </figure>
-
-                                    <div ng-if="aboutMeStorage.prod_peach == 0">
-                                        <style>
-                                            .img4 {
-                                                -webkit-filter: grayscale(100%);
-                                                /* Safari 6.0 - 9.0 */
-                                                filter: grayscale(100%);
-                                            }
-                                        </style>
-                                        <!-- code to render a large video block-->
-                                    </div>
-                                    <figure class="bombImg">
-                                        <img id="profile-img" src="https://lh6.googleusercontent.com/--2fS4T8kO6k/AAAAAAAAAAI/AAAAAAAAAAA/AB6qoq2DVOW0W3Xlm3tLINHu-rc4Jd2jLQ/s96-c/photo.jpg" class="bombI img4" alt="seed bomb">
-                                        <figcaption>x{{aboutMeStorage.prod_peach}}</figcaption>
-                                    </figure>
-                            </div>
-                            <br>
+                        <h1 class="mb-10" style="    font-size: 30px;
+        font-weight: 400;">Dashboard</h1>
+                        <div class="w3-light-grey w3-round-xlarge">
+                            <div class="w3-container w3-blue w3-round-xlarge" style="width:{{getPerc()}}%">{{getPerc()}}%</div>
                         </div>
                         <br>
-                        <a href="/leaderboard.html" class="w3-btn" style="margin:24px 0 4px 0;">Leaderboard</a>
-                        <br>
-                        <a href="/store.html" class="w3-btn" style="margin: 4px">Store</a>
-                        <br>
-                        <a href="/payouts.html" class="w3-btn" style="margin: 4px">Payouts</a>
-                        <br>
-                        <a href="/enterKey.html" class="w3-btn" style="margin: 4px">Enter Key</a>
-                        <br>
+                        <p class="progress-p">Level {{aboutMeStorage.level}}</p>
+                        <div class="container">
 
+                            <p class="mx-auto" style="color: white; margin: 30px 0 0 0; font-size: 20px;">
+                                Your green collection.
+                            </p>
+                            <br>
+                            <div class="center">
+                                <div class="seedBombCollection" style="display: block;">
+                                        <div ng-if="aboutMeStorage.prod_apple == 0">
+                                            <style>
+                                                .img1 {
+                                                    -webkit-filter: grayscale(100%);
+                                                    /* Safari 6.0 - 9.0 */
+                                                    filter: grayscale(100%);
+                                                }
+                                            </style>
+                                            <!-- code to render a large video block-->
+                                        </div>
+                                        <figure class="bombImg">
+                                            <img id="profile-img" src="https://lh6.googleusercontent.com/--2fS4T8kO6k/AAAAAAAAAAI/AAAAAAAAAAA/AB6qoq2DVOW0W3Xlm3tLINHu-rc4Jd2jLQ/s96-c/photo.jpg" class="bombI img1" alt="seed bomb">
+                                            <figcaption>x{{aboutMeStorage.prod_apple}}</figcaption>
+                                        </figure>
+
+                                        <div ng-if="aboutMeStorage.prod_mango == 0">
+                                            <style>
+                                                .img2 {
+                                                    -webkit-filter: grayscale(100%);
+                                                    /* Safari 6.0 - 9.0 */
+                                                    filter: grayscale(100%);
+                                                }
+                                            </style>
+                                            <!-- code to render a large video block-->
+                                        </div>
+                                        <figure class="bombImg">
+                                            <img id="profile-img" src="https://lh6.googleusercontent.com/--2fS4T8kO6k/AAAAAAAAAAI/AAAAAAAAAAA/AB6qoq2DVOW0W3Xlm3tLINHu-rc4Jd2jLQ/s96-c/photo.jpg" class="bombI img2" alt="seed bomb">
+                                            <figcaption>x{{aboutMeStorage.prod_mango}}</figcaption>
+                                        </figure>
+
+                                        <div ng-if="aboutMeStorage.prod_banana == 0">
+                                            <style>
+                                                .img3 {
+                                                    -webkit-filter: grayscale(100%);
+                                                    /* Safari 6.0 - 9.0 */
+                                                    filter: grayscale(100%);
+                                                }
+                                            </style>
+                                            <!-- code to render a large video block-->
+                                        </div>
+                                        <figure class="bombImg">
+                                            <img id="profile-img" src="https://lh6.googleusercontent.com/--2fS4T8kO6k/AAAAAAAAAAI/AAAAAAAAAAA/AB6qoq2DVOW0W3Xlm3tLINHu-rc4Jd2jLQ/s96-c/photo.jpg" class="bombI img3" alt="seed bomb">
+                                            <figcaption>x{{aboutMeStorage.prod_banana}}</figcaption>
+                                        </figure>
+
+                                        <div ng-if="aboutMeStorage.prod_peach == 0">
+                                            <style>
+                                                .img4 {
+                                                    -webkit-filter: grayscale(100%);
+                                                    /* Safari 6.0 - 9.0 */
+                                                    filter: grayscale(100%);
+                                                }
+                                            </style>
+                                            <!-- code to render a large video block-->
+                                        </div>
+                                        <figure class="bombImg">
+                                            <img id="profile-img" src="https://lh6.googleusercontent.com/--2fS4T8kO6k/AAAAAAAAAAI/AAAAAAAAAAA/AB6qoq2DVOW0W3Xlm3tLINHu-rc4Jd2jLQ/s96-c/photo.jpg" class="bombI img4" alt="seed bomb">
+                                            <figcaption>x{{aboutMeStorage.prod_peach}}</figcaption>
+                                        </figure>
+                                </div>
+                                <br>
+                            </div>
+                            <br>
+                            <a href="#" ng-click="toLeaderboardSecion()" class="w3-btn" style="margin:24px 0 4px 0;">Leaderboard</a>
+                            <br>
+                            <a href="#" ng-click="toStoreSecion()"class="w3-btn" style="margin: 4px">Store</a>
+                            <br>
+                            <a href="#" ng-click="toPayoutsSecion()" class="w3-btn" style="margin: 4px">Payouts</a>
+                            <br>
+                            <a href="#" ng-click="tokeySecion()" class="w3-btn" style="margin: 4px">Enter Key</a>
+                            <br>
+
+                        </div>
+                        <p style="color: white; margin-top: 10px;">Tip: Visit the 'Payout' section to get free seed bombs.</p>
                     </div>
-                    <p style="color: white; margin-top: 10px;">Tip: Visit the 'Payout' section to get free seed bombs.</p>
+                    </div>
                 </div>
-                <div style="display: none;">
+
+                <div id="leaderboardSection" style="display: none">
+                    <div class="row fullscreen d-flex ">
+                    <div class="banner-content col-lg-9 col-md-12" style="top: 20px;" id="home">
+                                <a href="#" ng-click="fromLeaderboardSecionToHome()" class="w3-btn w3-margin-bottom" style="position: fixed;right: 1px;top: 1px; width: 90px;">Back</a>
+            
+                                <h1 class="mb-10" style="font-size: 30px;font-weight: 400;">Leaderboard</h1>
+            
+                                <div ng-repeat="user in leaderboardStorage  | orderBy : 'level':true">
+                                    <div class="card card--medium">
+                                        <div class="card__image" style="background-image: url(https://placeimg.com/640/480/nature);"></div>
+                                        <h2 class="card__title">{{user.name}}</h2>
+                                        <p class="card_p">Level {{user.level}}</p>
+                                        <div class="card__action-bar">
+                                            <button class="card__button" ng-click="visitProfile(user.id)">View Profile</button>
+                                        </div>
+                                    </div>
+                                </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div id="storeSection" style="display: none">
+                        <div class="row fullscreen d-flex ">
+                                <div class="banner-content col-lg-9 col-md-12" style="top: 20px;" id="home">
+                                    <a href="#" ng-click="fromStoreSecionToHome()" class="w3-btn w3-margin-bottom" style="position: fixed;right: 1px;top: 1px; width: 90px;">Back</a>
+                
+                                    <h1 class="mb-10" style="    font-size: 30px;
+                    font-weight: 400;">Store</h1>
+                
+                                    <!-- Cards-->
+                                    <div ng-repeat="product in storeStorage.products">
+                                        <div class="card card--big">
+                                            <div class="card__image" style="background-image: url(https://placeimg.com/640/480/any)"></div>
+                                            <h2 class="card__title" style="color: white;">{{product.name}}</h2>
+                                            <p class="card__text">{{product.about}}</p>
+                                            <div class="card__action-bar">
+                                                <p>+{{product.points}} points</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                
+                                </div>
+                
+                            </div>
+                </div>
+
+                <div id="payoutsSection" style="display: none">
+                        <div class="row fullscreen d-flex ">
+                                <div class="banner-content col-lg-9 col-md-12" style="top: 20px;" id="home">
+                                    <a href="#" ng-click="fromPayoutsSecionToHome()" class="w3-btn w3-margin-bottom" style="position: fixed;right: 1px;top: 1px; width: 90px;">Back</a>
+                
+                                    <h1 class="mb-10" style="    font-size: 30px;
+                    font-weight: 400;">Payouts</h1>
+                
+                                    <div ng-repeat="prize in payoutStorage.payouts">
+                                        <div class="card card--small">
+                                            <div class="card__image" style="background-image: url(https://placeimg.com/640/480/nature);"></div>
+                                            <h2 class="card__title">{{prize.head}}</h2>
+                                            <p class="payout-p">{{prize.about}}</p>
+                                            <div class="card__action-bar">
+                                                <button class="card__button">REDEEM</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                
+                                </div>
+                
+                            </div>
+                </div>
+
+                <div id="keySection" style="display: none">
+                        <div class="row fullscreen d-flex justify-content-center align-items-center">
+                                <div class="banner-content col-lg-9 col-md-12 justify-content-center" style="top: -90px;" id="home">
+                                    <a href="#" ng-click="fromKeySecionToHome()" class="w3-btn w3-margin-bottom" style="position: fixed;right: 1px;top: 1px; width: 90px;">Back</a>
+                
+                                    <div class="container">
+                                        <p class="mx-auto" style="color: white; margin: 30px 0 0 0; font-size: 20px;">
+                                            Enter your bought product's key.
+                                        </p>
+                                        <br>
+                
+                                        <div class=" col-lg-12 relative section-gap" style=" padding: 0 0px 0 0px; width: 100%;">
+                                            <form ng-submit="verifyToken(token)">
+                                                <input required="" type="text" class="form-control form-control-lg input-block js-email-notice-trigger" placeholder="Enter Product Key." ng-model="token">
+                                                <br>
+                                                <button type="submit" class="btn btn-primary">Verify Key!</button>
+                                            </form>
+                                        </div>
+                
+                                        <p style="color: white; margin-top: 10px;">This adds the product that you have bought to your app.</p>
+                
+                                        <p id="keySucc" style="color: green; font-size:20px; font-weight: 100; display: none;">Product has been added to you profile.</p>
+                
+                                        <p id="keyFail" style="color: red; font-size:20px; font-weight: 100; display: none;">Invalid product key</p>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+
+            <div style="display: none;">
                     {{checkHomeRedirect();}}
-                </div>
             </div>
         </div>
     </section>

@@ -242,9 +242,49 @@ angular.module('homeMenu', ['ionic'])
         window.localStorage.setItem("aboutMeStorage", JSON.stringify(retrievedAboutMeStorage))
     }
 
-    //$scope.checkHomeRedirect();
-    //window.location = "/signup.html"
+    //leaderboadr
+    $scope.toLeaderboardSecion = function(){
+        document.getElementById("homeSection").style.display = "none"
+        document.getElementById("leaderboardSection").style.display = "block"
+    }
 
+    $scope.fromLeaderboardSecionToHome = function(){
+        document.getElementById("leaderboardSection").style.display = "none"
+        document.getElementById("homeSection").style.display = "block"
+    }
+
+    //store
+    $scope.toStoreSecion = function(){
+        document.getElementById("homeSection").style.display = "none"
+        document.getElementById("storeSection").style.display = "block"
+    }
+
+    $scope.fromStoreSecionToHome = function(){
+        document.getElementById("storeSection").style.display = "none"
+        document.getElementById("homeSection").style.display = "block"
+    }
+
+    //payouts
+    $scope.toPayoutsSecion = function(){
+        document.getElementById("homeSection").style.display = "none"
+        document.getElementById("payoutsSection").style.display = "block"
+    }
+
+    $scope.fromPayoutsSecionToHome = function(){
+        document.getElementById("payoutsSection").style.display = "none"
+        document.getElementById("homeSection").style.display = "block"
+    }
+
+    //keys
+    $scope.tokeySecion = function(){
+        document.getElementById("homeSection").style.display = "none"
+        document.getElementById("keySection").style.display = "block"
+    }
+
+    $scope.fromKeySecionToHome = function(){
+        document.getElementById("keySection").style.display = "none"
+        document.getElementById("homeSection").style.display = "block"
+    }
 })
 
 
