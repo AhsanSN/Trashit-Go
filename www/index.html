@@ -132,7 +132,7 @@
                             <br>
                             <a href="#" ng-click="toPayoutsSecion()" class="w3-btn" style="margin: 4px">Payouts</a>
                             <br>
-                            <a href="#" ng-click="toKeySecion()" class="w3-btn" style="margin: 4px">Enter Key</a>
+                            <a href="#" ng-click="tokeySecion()" class="w3-btn" style="margin: 4px">Enter Key</a>
                             <br>
 
                         </div>
@@ -208,6 +208,35 @@
                 
                                 </div>
                 
+                            </div>
+                </div>
+
+                <div id="keySection" style="display: none">
+                        <div class="row fullscreen d-flex justify-content-center align-items-center">
+                                <div class="banner-content col-lg-9 col-md-12 justify-content-center" style="top: -90px;" id="home">
+                                    <a href="#" ng-click="fromKeySecionToHome()" class="w3-btn w3-margin-bottom" style="position: fixed;right: 1px;top: 1px; width: 90px;">Back</a>
+                
+                                    <div class="container">
+                                        <p class="mx-auto" style="color: white; margin: 30px 0 0 0; font-size: 20px;">
+                                            Enter your bought product's key.
+                                        </p>
+                                        <br>
+                
+                                        <div class=" col-lg-12 relative section-gap" style=" padding: 0 0px 0 0px; width: 100%;">
+                                            <form ng-submit="verifyToken(token)">
+                                                <input required="" type="text" class="form-control form-control-lg input-block js-email-notice-trigger" placeholder="Enter Product Key." ng-model="token">
+                                                <br>
+                                                <button type="submit" class="btn btn-primary">Verify Key!</button>
+                                            </form>
+                                        </div>
+                
+                                        <p style="color: white; margin-top: 10px;">This adds the product that you have bought to your app.</p>
+                
+                                        <p id="keySucc" style="color: green; font-size:20px; font-weight: 100; display: none;">Product has been added to you profile.</p>
+                
+                                        <p id="keyFail" style="color: red; font-size:20px; font-weight: 100; display: none;">Invalid product key</p>
+                                    </div>
+                                </div>
                             </div>
                 </div>
 
