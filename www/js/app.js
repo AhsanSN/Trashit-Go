@@ -285,6 +285,23 @@ angular.module('homeMenu', ['ionic'])
         document.getElementById("aboutSection").style.display = "none"
         document.getElementById("homeSection").style.display = "block"
     }
+
+    $scope.placeOrder = function(appleQuantity, mangoQuantity, bananaQuantity, peachQuantity, phoneNumber){
+        
+        var order = {
+            "name":$scope.aboutMeStorage,
+            "phoneNumber":phoneNumber,
+            "prod_apple":appleQuantity,
+            "prod_mango":mangoQuantity,
+            "prod_banana":bananaQuantity,
+            "prod_peach":peachQuantity
+        }
+
+        // uploading user to global db
+        var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
+        xmlhttp.open("POST", "https://game.anomoz.com/api/post/order_create.php");
+        xmlhttp.send(JSON.stringify(order));
+    }
 })
 
 
@@ -300,6 +317,9 @@ angular.module('homeMenu', ['ionic'])
 
 //read productTokens [get]
 //https://game.anomoz.com/api/post/productTokens_read.php
+
+//placing users [post]
+//https://game.anomoz.com/api/post/order_create.php
 
 //update productTokens [put, post], shows single token//should not be used
 //https://game.anomoz.com/api/post/productTokens_update.php?token=1
