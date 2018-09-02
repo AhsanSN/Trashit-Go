@@ -130,6 +130,7 @@ figcaption {
 @import url('https://fonts.googleapis.com/css?family=Damion|Muli:400,600');
 body {
     font-family: 'Muli', sans-serif;
+    background-color: #3f6b41;
 }
 
 h2 {

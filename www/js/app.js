@@ -241,18 +241,7 @@ angular.module('homeMenu', ['ionic'])
         console.log("edited value", retrievedAboutMeStorage)
         window.localStorage.setItem("aboutMeStorage", JSON.stringify(retrievedAboutMeStorage))
     }
-
-    //leaderboadr
-    $scope.toLeaderboardSecion = function(){
-        document.getElementById("homeSection").style.display = "none"
-        document.getElementById("leaderboardSection").style.display = "block"
-    }
-
-    $scope.fromLeaderboardSecionToHome = function(){
-        document.getElementById("leaderboardSection").style.display = "none"
-        document.getElementById("homeSection").style.display = "block"
-    }
-
+    
     //store
     $scope.toStoreSecion = function(){
         document.getElementById("homeSection").style.display = "none"
