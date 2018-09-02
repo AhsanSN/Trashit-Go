@@ -285,6 +285,17 @@ angular.module('homeMenu', ['ionic'])
         document.getElementById("keySection").style.display = "none"
         document.getElementById("homeSection").style.display = "block"
     }
+
+    //about
+    $scope.toAboutSecion = function(){
+        document.getElementById("homeSection").style.display = "none"
+        document.getElementById("aboutSection").style.display = "block"
+    }
+
+    $scope.fromAboutSecionToHome = function(){
+        document.getElementById("aboutSection").style.display = "none"
+        document.getElementById("homeSection").style.display = "block"
+    }
 })
 
 
