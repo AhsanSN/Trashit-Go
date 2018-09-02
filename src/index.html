@@ -128,11 +128,11 @@
                             <br>
                             <a href="#" ng-click="toLeaderboardSecion()" class="w3-btn" style="margin:24px 0 4px 0;">Leaderboard</a>
                             <br>
-                            <a href="/store.html" class="w3-btn" style="margin: 4px">Store</a>
+                            <a href="#" ng-click="toStoreSecion()"class="w3-btn" style="margin: 4px">Store</a>
                             <br>
-                            <a href="/payouts.html" class="w3-btn" style="margin: 4px">Payouts</a>
+                            <a href="#" ng-click="toPayoutsSecion()" class="w3-btn" style="margin: 4px">Payouts</a>
                             <br>
-                            <a href="/enterKey.html" class="w3-btn" style="margin: 4px">Enter Key</a>
+                            <a href="#" ng-click="toKeySecion()" class="w3-btn" style="margin: 4px">Enter Key</a>
                             <br>
 
                         </div>
@@ -140,6 +140,7 @@
                     </div>
                     </div>
                 </div>
+
                 <div id="leaderboardSection" style="display: none">
                     <div class="row fullscreen d-flex ">
                     <div class="banner-content col-lg-9 col-md-12" style="top: 20px;" id="home">
@@ -159,6 +160,31 @@
                                 </div>
                     </div>
                     </div>
+                </div>
+
+                <div id="storeSection">
+                        <div class="row fullscreen d-flex ">
+                                <div class="banner-content col-lg-9 col-md-12" style="top: 20px;" id="home">
+                                    <a href="#" ng-click="fromStoreSecionToHome()" class="w3-btn w3-margin-bottom" style="position: fixed;right: 1px;top: 1px; width: 90px;">Back</a>
+                
+                                    <h1 class="mb-10" style="    font-size: 30px;
+                    font-weight: 400;">Store</h1>
+                
+                                    <!-- Cards-->
+                                    <div ng-repeat="product in storeStorage.products">
+                                        <div class="card card--big">
+                                            <div class="card__image" style="background-image: url(https://placeimg.com/640/480/any)"></div>
+                                            <h2 class="card__title" style="color: white;">{{product.name}}</h2>
+                                            <p class="card__text">{{product.about}}</p>
+                                            <div class="card__action-bar">
+                                                <p>+{{product.points}} points</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                
+                                </div>
+                
+                            </div>
                 </div>
 
             <div style="display: none;">

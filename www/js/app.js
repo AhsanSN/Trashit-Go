@@ -251,6 +251,16 @@ angular.module('homeMenu', ['ionic'])
         document.getElementById("leaderboardSection").style.display = "none"
         document.getElementById("homeSection").style.display = "block"
     }
+
+    $scope.toStoreSecion = function(){
+        document.getElementById("homeSection").style.display = "none"
+        document.getElementById("storeSection").style.display = "block"
+    }
+
+    $scope.fromStoreSecionToHome = function(){
+        document.getElementById("storeSection").style.display = "none"
+        document.getElementById("homeSection").style.display = "block"
+    }
 })
 
 
