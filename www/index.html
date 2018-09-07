@@ -151,14 +151,16 @@
                 
                                     <!-- Cards-->
                                     <div ng-repeat="product in storeStorage.products">
-                                        <div class="card card--big">
-                                            <div class="card__image" style="background-image: url(https://placeimg.com/640/480/any)"></div>
-                                            <h2 class="card__title" style="color: white;">{{product.name}}</h2>
-                                            <p class="card__text">{{product.about}}</p>
-                                            <div class="card__action-bar">
-                                                <p>+{{product.points}} points</p>
+                                        <a href="buyProduct.html">
+                                            <div class="card card--big">
+                                                <div class="card__image" style="background-image: url(https://placeimg.com/640/480/any)"></div>
+                                                <h2 class="card__title" style="color: white;">{{product.name}}</h2>
+                                                <p class="card__text">{{product.about}}</p>
+                                                <div class="card__action-bar">
+                                                    <p>+{{product.points}} points</p>
+                                                </div>
                                             </div>
-                                        </div>
+                                        </a>
                                     </div>
                 
                                 </div>

@@ -297,9 +297,10 @@ angular.module('homeMenu', ['ionic'])
             "prod_peach":peachQuantity
         }
 
+        console.log(order)
         // uploading user to global db
         var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
-        xmlhttp.open("POST", "https://game.anomoz.com/api/post/order_create.php");
+        xmlhttp.open("POST", "https://game.anomoz.com/api/post/place_order.php");
         xmlhttp.send(JSON.stringify(order));
     }
 })
@@ -318,8 +319,8 @@ angular.module('homeMenu', ['ionic'])
 //read productTokens [get]
 //https://game.anomoz.com/api/post/productTokens_read.php
 
-//placing users [post]
-//https://game.anomoz.com/api/post/order_create.php
+//placing order [post]
+//https://game.anomoz.com/api/post/place_order.php
 
 //update productTokens [put, post], shows single token//should not be used
 //https://game.anomoz.com/api/post/productTokens_update.php?token=1
