@@ -288,6 +288,12 @@ angular.module('homeMenu', ['ionic'])
 
     $scope.placeOrder = function(appleQuantity, mangoQuantity, bananaQuantity, peachQuantity, phoneNumber){
         
+        if((appleQuantity==undefined)||(mangoQuantity==undefined)||(bananaQuantity==undefined)||(peachQuantity==undefined)||(phoneNumber.length==8)){
+            document.getElementById("keyFail").style.display = "block";
+            return 0
+
+        }
+        console.log("order")
         var order = {
             "name":$scope.aboutMeStorage,
             "phoneNumber":phoneNumber,
@@ -300,8 +306,11 @@ angular.module('homeMenu', ['ionic'])
         console.log(order)
         // uploading user to global db
         var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
-        xmlhttp.open("POST", "https://game.anomoz.com/api/post/place_order.php");
-        xmlhttp.send(JSON.stringify(order));
+        //xmlhttp.open("POST", "https://game.anomoz.com/api/post/place_order.php");
+        //xmlhttp.send(JSON.stringify(order));
+
+        //document.getElementById("buyForm").style.display = "none";
+        document.getElementById("keySucc").style.display = "block";
     }
 })
 
