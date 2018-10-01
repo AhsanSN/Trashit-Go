@@ -1,5 +1,7 @@
 # Trashit Go
 
+An Android app made for the startup "Trashit" for their marketing purpose. Similiar to the Pokemon game, where you collect pokemons, here you have to collect seeds in order to level up. The app contains a payout and leaderboard section for bonuses and competition between users. Made using Ionic.
+
 ## Screenshots
 
 Note: These screenshots were taken from desktop browser during development. App screenshots are currently not available.
