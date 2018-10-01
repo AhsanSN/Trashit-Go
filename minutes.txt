@@ -1,0 +1,16 @@
+inst private posts
+access through tags
+fb api
+fb and inst - relation
+send notf to the user(push notf)
+message notf/ email
+deal redeem
+points
+medium integration
+order popup
+blog
+slider for box
+server for website
+
+
+
