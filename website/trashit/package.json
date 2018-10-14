@@ -1,0 +1,14 @@
+{
+  "name": "trashit",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "aos": "^2.1.1",
+    "babel-runtime": "^6.20.0",
+    "choco": "^0.2.1",
+    "jquery": "2.2.2",
+    "meteor-node-stubs": "~0.2.4"
+  }
+}
