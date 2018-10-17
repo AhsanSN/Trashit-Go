@@ -1,123 +1,198 @@
-<!doctype html>
-<html lang="en">
-<!--
+<style type="text/css">
+    @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-Page    : index / MobApp
-Version : 1.0
-Author  : Colorlib
-URI     : https://colorlib.com
+html{    background:url(http://www.musictruth.com/wp-content/uploads/2016/11/abstract-greenery.jpg) no-repeat;
+  background-size: cover;
+  height:100%;
+}
 
- -->
+#feedback-page{
+    text-align:center;
+}
 
-<head>
-    <title>Trashit</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Mobland - Mobile App Landing Page Template">
-    <meta name="keywords" content="HTML5, bootstrap, mobile, app, landing, ios, android, responsive">
+#form-main{
+    width:100%;
+    float:left;
+    padding-top:0px;
+}
 
-    <!-- Font -->
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
+#form-div {
+    background-color:rgba(72,72,72,0.4);
+    padding-left:35px;
+    padding-right:35px;
+    padding-top:35px;
+    padding-bottom:50px;
+    width: 450px;
+    float: left;
+    left: 50%;
+    position: absolute;
+  margin-top:30px;
+    margin-left: -260px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+}
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Themify Icons -->
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <!-- Owl carousel -->
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <!-- Main css -->
-    <link href="css/style.css" rel="stylesheet">
-</head>
+.feedback-input {
+    color:#3c3c3c;
+    font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+    font-size: 18px;
+    border-radius: 0;
+    line-height: 22px;
+    background-color: #fbfbfb;
+    padding: 13px 13px 13px 54px;
+    margin-bottom: 10px;
+    width:100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+  border: 3px solid rgba(0,0,0,0);
+}
 
-<body data-spy="scroll" data-target="#navbar" data-offset="30">
+.feedback-input:focus{
+    background: #fff;
+    box-shadow: 0;
+    border: 3px solid #3498db;
+    color: #3498db;
+    outline: none;
+  padding: 13px 13px 13px 54px;
+}
 
-    <!-- Nav Menu -->
+.focused{
+    color:#30aed6;
+    border:#30aed6 solid 3px;
+}
 
-    <header class="bg-gradient" id="home">
-        <div class="container mt-5">
-            <h1>Trashit</h1>
-            <p class="tagline">Empowering green lifestyle</p>
+/* Icons ---------------------------------- */
+#name{
+    background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+    background-size: 30px 30px;
+    background-position: 11px 8px;
+    background-repeat: no-repeat;
+}
 
-            <br>
-            <form>
-              <div class="form-group">
-                <label for="exampleFormControlInput1">Email address</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-              </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                  <label class="form-check-label" for="inlineCheckbox1">1</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                  <label class="form-check-label" for="inlineCheckbox2">2</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
-                  <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
-                </div>
-              <div class="form-group">
-                <label for="exampleFormControlTextarea1">Describe your order. Any comments or anything.</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-              </div>
-            </form>
-            <br><br>
+#name:focus{
+    background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+    background-size: 30px 30px;
+    background-position: 8px 5px;
+  background-position: 11px 8px;
+    background-repeat: no-repeat;
+}
 
-        </div>
-    </header>
+#email{
+    background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+    background-size: 30px 30px;
+    background-position: 11px 8px;
+    background-repeat: no-repeat;
+}
 
-    <!-- // end .section -->
+#email:focus{
+    background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+    background-size: 30px 30px;
+  background-position: 11px 8px;
+    background-repeat: no-repeat;
+}
 
-    <!-- // end .section -->
+#comment{
+    background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg);
+    background-size: 30px 30px;
+    background-position: 11px 8px;
+    background-repeat: no-repeat;
+}
 
+textarea {
+    width: 100%;
+    height: 150px;
+    line-height: 150%;
+    resize:vertical;
+}
 
+input:hover, textarea:hover,
+input:focus, textarea:focus {
+    background-color:white;
+}
 
-    <div class="light-bg py-5" id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 text-center text-lg-left">
-                    <p class="mb-2"> <span class="ti-location-pin mr-2"></span>National Incubation Center, NED University, Karachi.</p>
-                    <div class=" d-block d-sm-inline-block">
-                        <p class="mb-2">
-                            <span class="ti-email mr-2"></span> <a class="mr-4" href="mailto:trashit@gmail.com">trashit@gmail.com</a>
-                        </p>
-                    </div>
-                    <div class="d-block d-sm-inline-block">
-                        <p class="mb-0">
-                            <span class="ti-headphone-alt mr-2"></span> <a href="tel:51836362800">0336-2286024</a>
-                        </p>
-                    </div>
+#button-blue{
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    float:left;
+    width: 100%;
+    border: #fbfbfb solid 4px;
+    cursor:pointer;
+    background-color: #3498db;
+    color:white;
+    font-size:24px;
+    padding-top:22px;
+    padding-bottom:22px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
 
-                </div>
-                <div class="col-lg-6">
-                    <div class="social-icons">
-                        <a href="https://facebook.com/trashit"><span class="ti-facebook"></span></a>
-                        <a href="https://twitter.com/trashit"><span class="ti-twitter-alt"></span></a>
-                        <a href="https://instagram.com/trashit"><span class="ti-instagram"></span></a>
-                    </div>
-                </div>
-            </div>
+#button-blue:hover{
+    background-color: rgba(0,0,0,0);
+    color: #0493bd;
+}
+    
+.submit:hover {
+    color: #3498db;
+}
+    
+.ease {
+    width: 0px;
+    height: 74px;
+    background-color: #fbfbfb;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -o-transition: .3s ease;
+    -ms-transition: .3s ease;
+    transition: .3s ease;
+}
 
-        </div>
+.submit:hover .ease{
+  width:100%;
+  background-color:white;
+}
 
-    </div>
-    <!-- // end .section -->
-    <footer class="my-5 text-center">
-        <!-- Copyright removal is not prohibited! -->
-        <p class="mb-2"><small>COPYRIGHT © 2018. ALL RIGHTS RESERVED. </small></p>
+@media only screen and (max-width: 580px) {
+    #form-div{
+        left: 3%;
+        margin-right: 3%;
+        width: 88%;
+        margin-left: 0;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+}
+</style>
 
-    </footer>
+<h1>Place Order</h1>
+<div id="form-main">
+  <div id="form-div">
+    <form class="form" id="form1">
+      
+      <p class="name">
+        <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" />
+      </p>
+      
+      <p class="email">
+        <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />
+      </p>
 
-    <!-- jQuery and Bootstrap -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <!-- Plugins JS -->
-    <script src="js/owl.carousel.min.js"></script>
-    <!-- Custom JS -->
-    <script src="js/script.js"></script>
-
-</body>
-
-</html>
+      <p class="name">
+        <input name="phone" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Phone Number" id="name" />
+      </p>
+      
+      <p class="text">
+        <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment"></textarea>
+      </p>
+      
+      
+      <div class="submit">
+        <input type="submit" value="Submit" id="button-blue"/>
+        <div class="ease"></div>
+      </div>
+    </form>
+  </div>
