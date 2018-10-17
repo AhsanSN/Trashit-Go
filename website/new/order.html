@@ -30,6 +30,8 @@ $headers .= 'From: <trashitOrder@trashit.com>' . "\r\n";
 
 mail($to,$subject,$message,$headers);
 
+header("Location: https://game.anomoz.com/trashit.html");
+die();
 }
 
 ?>
