@@ -221,7 +221,7 @@
                 <h2>Start your zero waste life</h2>
                 <p class="tagline">Start your zero waste life and use our product and etc.</p>
                 <div class="my-4">
-                    <a href="order.html" class="btn btn-light">Order Now!</a>
+                    <a href="order.php" class="btn btn-light">Order Now!</a>
                 </div>
             </div>
         </div>
@@ -267,6 +267,11 @@
     <script src="js/owl.carousel.min.js"></script>
     <!-- Custom JS -->
     <script src="js/script.js"></script>
+    <script>
+        $.fn.andSelf = function() {
+  return this.addBack.apply(this, arguments);
+}
+    </script>
 
 </body>
 
